@@ -14,7 +14,7 @@ use Yii;
  * @property string $end_time
  * @property int|null $quota
  *
- * @property Doctors $doctor
+ * @property Doctor $doctor
  */
 class DoctorSchedule extends \yii\db\ActiveRecord
 {

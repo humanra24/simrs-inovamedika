@@ -6,6 +6,7 @@ use Yii;
 use yii\rest\Controller;
 use yii\filters\Cors;
 use common\components\JwtAuth;
+use common\components\RoleFilter;
 use common\models\Patient;
 use common\models\Polyclinic;
 use common\models\Doctor;
@@ -30,9 +31,18 @@ class MasterDataController extends Controller
     public function behaviors()
     {
         $behaviors = parent::behaviors();
+
         $behaviors['authenticator'] = ['class' => JwtAuth::class];
+
+        // Hanya Administrator yang bisa akses Master Data
+        $behaviors['roleFilter'] = [
+            'class' => RoleFilter::class,
+            'roles' => ['Administrator'],
+        ];
+
         $behaviors['corsFilter'] = ['class' => Cors::class];
         unset($behaviors['contentNegotiator']['formats']['text/html']);
+
         return $behaviors;
     }
 

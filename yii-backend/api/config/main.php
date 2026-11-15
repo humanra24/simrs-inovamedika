@@ -36,12 +36,35 @@ return [
             'rules' => [
                 'POST api/v1/auth/login' => 'v1/auth/login',
 
-                // Routing Dinamis untuk Master Data
+                // Master Data
                 'GET api/v1/master/<entity>' => 'v1/master-data/index',
                 'POST api/v1/master/<entity>' => 'v1/master-data/create',
                 'GET api/v1/master/<entity>/<id:\d+>' => 'v1/master-data/view',
                 'PUT api/v1/master/<entity>/<id:\d+>' => 'v1/master-data/update',
                 'DELETE api/v1/master/<entity>/<id:\d+>' => 'v1/master-data/delete',
+
+                // Pendaftaran & Antrean
+                'PUT api/v1/visits/update-status/<id:\d+>' => 'v1/visit/update-status',
+                'GET api/v1/visits/history/<patient_id:\d+>' => 'v1/visit/history',
+                'POST api/v1/visits/register' => 'v1/visit/register',
+                'GET api/v1/visits/queue' => 'v1/visit/queue',
+
+                // Pemeriksaan (EMR)
+                'GET api/v1/medical-records/waiting' => 'v1/medical-record/waiting',
+                'POST api/v1/medical-records/<visit_id:\d+>' => 'v1/medical-record/create',
+                'PUT api/v1/medical-records/<visit_id:\d+>' => 'v1/medical-record/update',
+                'GET api/v1/medical-records/<visit_id:\d+>' => 'v1/medical-record/view',
+
+                // Tindakan Medis
+                'GET api/v1/visit-actions/<visit_id:\d+>' => 'v1/visit-action/index',
+                'POST api/v1/visit-actions/<visit_id:\d+>' => 'v1/visit-action/create',
+                'DELETE api/v1/visit-actions/<id:\d+>' => 'v1/visit-action/delete',
+
+                // Farmasi / Resep
+                'POST api/v1/prescriptions/<visit_id:\d+>' => 'v1/prescription/create',
+                'GET api/v1/prescriptions/pending' => 'v1/prescription/pending',
+                'POST api/v1/prescriptions/<id:\d+>/dispense' => 'v1/prescription/dispense',
+                'DELETE api/v1/prescriptions/<id:\d+>' => 'v1/prescription/delete',
             ],
         ],
         'jwt' => [

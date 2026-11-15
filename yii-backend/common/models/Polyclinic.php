@@ -12,7 +12,7 @@ use Yii;
  * @property string|null $description
  * @property string|null $created_at
  *
- * @property Doctors[] $doctors
+ * @property Doctor[] $doctors
  */
 class Polyclinic extends \yii\db\ActiveRecord
 {

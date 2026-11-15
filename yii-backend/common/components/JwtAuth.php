@@ -2,6 +2,7 @@
 
 namespace common\components;
 
+use Yii; // <-- Tambahkan ini
 use yii\filters\auth\AuthMethod;
 use yii\web\UnauthorizedHttpException;
 use common\models\User;
@@ -22,8 +23,7 @@ class JwtAuth extends AuthMethod
 
             list($header, $payload, $signature) = $parts;
 
-            // Validasi Signature (Pastikan secret ini SAMA dengan di User.php)
-            $secret = 'RAHASIAKU_1234567890';
+            $secret = $_ENV['JWT_SECRET'] ?? 'RAHASIAKU_1234567890';
             $validSignature = hash_hmac('sha256', $header . "." . $payload, $secret, true);
             $base64UrlSignature = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($validSignature));
 
@@ -31,17 +31,16 @@ class JwtAuth extends AuthMethod
                 throw new UnauthorizedHttpException('Signature token tidak valid.');
             }
 
-            // Decode Payload
             $decodedPayload = json_decode(base64_decode(str_replace(['-', '_'], ['+', '/'], $payload)), true);
 
-            // Cek Expired
             if (isset($decodedPayload['exp']) && $decodedPayload['exp'] < time()) {
                 throw new UnauthorizedHttpException('Token sudah kadaluarsa.');
             }
 
-            // Cari User berdasarkan ID (sub) di dalam token
             $userModel = User::findIdentity($decodedPayload['sub']);
             if ($userModel) {
+                // INI BAGIAN YANG HILANG: Simpan identitas ke Yii2
+                Yii::$app->user->setIdentity($userModel);
                 return $userModel;
             }
         }

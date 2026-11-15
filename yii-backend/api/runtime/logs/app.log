@@ -1806,3 +1806,2345 @@ $_SERVER = [
     'DB_USERNAME' => 'postgres'
     'DB_PASSWORD' => '123'
 ]
+2026-11-15 03:13:03 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('register', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/visit/regist...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 03:13:03 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '57655'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visits/register'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visits/register'
+    'PHP_SELF' => '/index.php/api/v1/visits/register'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7ba9a31c-b2c2-4d83-8f06-1fb52ca54080'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794712383.7854
+    'REQUEST_TIME' => 1794712383
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:13:19 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Harap login terlebih dahulu. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:18
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('register', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/visit/regist...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:13:19 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '57657'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visits/register'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visits/register'
+    'PHP_SELF' => '/index.php/api/v1/visits/register'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '23a19609-c9bb-4e00-a6cb-fcdce043f093'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794712399.5686
+    'REQUEST_TIME' => 1794712399
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:13:25 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Harap login terlebih dahulu. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:18
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('register', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/visit/regist...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:13:24 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '57660'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visits/register'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visits/register'
+    'PHP_SELF' => '/index.php/api/v1/visits/register'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '4e2bb8c8-a598-46c1-ae9e-e19659b106bf'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794712404.982
+    'REQUEST_TIME' => 1794712404
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:13:33 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Harap login terlebih dahulu. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:18
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('register', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/visit/regist...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:13:33 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '57667'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visits/register'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visits/register'
+    'PHP_SELF' => '/index.php/api/v1/visits/register'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '4cbf70e4-18d0-44bc-bf9b-d3bf20607207'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794712413.8067
+    'REQUEST_TIME' => 1794712413
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:18:30 [::1][-][-][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Setting unknown property: common\components\JwtAuth::priority in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\BaseObject.php:163
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\BaseYii.php(562): yii\base\BaseObject->__set('priority', 100)
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\BaseObject.php(107): yii\BaseYii::configure(Object(common\components\JwtAuth), Array)
+#2 [internal function]: yii\base\BaseObject->__construct(Array)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\di\Container.php(426): ReflectionClass->newInstanceArgs(Array)
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\di\Container.php(174): yii\di\Container->build('common\\componen...', Array, Array)
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\BaseYii.php(370): yii\di\Container->get('common\\componen...', Array, Array)
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(786): yii\BaseYii::createObject(Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(770): yii\base\Component->attachBehaviorInternal('authenticator', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(624): yii\base\Component->ensureBehaviors()
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('register', Array)
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/visit/regist...', Array)
+#14 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#16 {main}
+2026-11-15 03:18:30 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '64459'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visits/register'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visits/register'
+    'PHP_SELF' => '/index.php/api/v1/visits/register'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'ecb54afe-a930-43b2-891a-ce4cfb9304b6'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794712710.8362
+    'REQUEST_TIME' => 1794712710
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:18:56 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Harap login terlebih dahulu. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:18
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('register', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/visit/regist...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:18:56 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59954'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visits/register'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visits/register'
+    'PHP_SELF' => '/index.php/api/v1/visits/register'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'bc4a7488-91ec-45e2-b938-bae67f033ddf'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794712736.2576
+    'REQUEST_TIME' => 1794712736
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:19:10 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Harap login terlebih dahulu. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:18
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('register', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/visit/regist...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:19:10 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59957'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visits/register'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visits/register'
+    'PHP_SELF' => '/index.php/api/v1/visits/register'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '5d08b791-6380-4b54-a84c-20fc565e08d2'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794712750.2058
+    'REQUEST_TIME' => 1794712750
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:30:39 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Harap login terlebih dahulu. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:17
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:30:39 [::1][-][-][info][application] $_GET = [
+    'entity' => 'polyclinics'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '57479'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/polyclinics'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/polyclinics'
+    'PHP_SELF' => '/index.php/api/v1/master/polyclinics'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '27cbc63a-98d5-403a-88e8-7978cbb0c16a'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794713439.8739
+    'REQUEST_TIME' => 1794713439
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:30:52 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Harap login terlebih dahulu. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:17
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:30:51 [::1][-][-][info][application] $_GET = [
+    'entity' => 'polyclinics'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '57486'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/polyclinics'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/polyclinics'
+    'PHP_SELF' => '/index.php/api/v1/master/polyclinics'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '298226f9-da03-4f3d-a54a-89119e04ed22'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794713451.967
+    'REQUEST_TIME' => 1794713451
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:34:05 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:34:05 [::1][2][-][info][application] $_GET = [
+    'entity' => 'polyclinics'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59618'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/polyclinics'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/polyclinics'
+    'PHP_SELF' => '/index.php/api/v1/master/polyclinics'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '5343ba05-5c39-48d7-bc91-b5e58c5a457c'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794713645.8304
+    'REQUEST_TIME' => 1794713645
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:34:07 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:34:07 [::1][2][-][info][application] $_GET = [
+    'entity' => 'polyclinics'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59621'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/polyclinics'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/polyclinics'
+    'PHP_SELF' => '/index.php/api/v1/master/polyclinics'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'ce61980a-d444-4288-96cb-44cfef4e2c11'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794713647.2497
+    'REQUEST_TIME' => 1794713647
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:39:03 [::1][3][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('register', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/visit/regist...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:39:02 [::1][3][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61869'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visits/register'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visits/register'
+    'PHP_SELF' => '/index.php/api/v1/visits/register'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'aae218ba-2805-4ce2-89ed-137e2a2c61f1'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '71'
+    'HTTP_CONTENT_LENGTH' => '71'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794713942.9641
+    'REQUEST_TIME' => 1794713942
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:39:29 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:39:29 [::1][2][-][info][application] $_GET = [
+    'entity' => 'schedules'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61878'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/schedules'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/schedules'
+    'PHP_SELF' => '/index.php/api/v1/master/schedules'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'bd75e7c2-ef5b-4a4f-801f-da13f3218271'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794713969.6054
+    'REQUEST_TIME' => 1794713969
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:39:37 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('create', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:39:36 [::1][2][-][info][application] $_GET = [
+    'entity' => 'polyclinics'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61881'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/polyclinics'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/polyclinics'
+    'PHP_SELF' => '/index.php/api/v1/master/polyclinics'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'e852331e-cf6b-4584-851c-a3de84f69f29'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '65'
+    'HTTP_CONTENT_LENGTH' => '65'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794713976.9437
+    'REQUEST_TIME' => 1794713976
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:39:43 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('create', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:39:43 [::1][2][-][info][application] $_GET = [
+    'entity' => 'doctors'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61884'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/doctors'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/doctors'
+    'PHP_SELF' => '/index.php/api/v1/master/doctors'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'e85ecbd5-b282-4c2a-b2fc-2337828c0540'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '136'
+    'HTTP_CONTENT_LENGTH' => '136'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794713983.7678
+    'REQUEST_TIME' => 1794713983
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:39:52 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('create', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:39:52 [::1][2][-][info][application] $_GET = [
+    'entity' => 'schedules'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61887'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/schedules'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/schedules'
+    'PHP_SELF' => '/index.php/api/v1/master/schedules'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '12e1fb52-3c67-43cb-bc96-799e557a7987'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '125'
+    'HTTP_CONTENT_LENGTH' => '125'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794713992.8475
+    'REQUEST_TIME' => 1794713992
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:40:12 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('create', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:40:12 [::1][2][-][info][application] $_GET = [
+    'entity' => 'schedules'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61895'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/schedules'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/schedules'
+    'PHP_SELF' => '/index.php/api/v1/master/schedules'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7606e143-5e3c-431d-b10e-f6c64b84fce3'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '125'
+    'HTTP_CONTENT_LENGTH' => '125'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794714012.3799
+    'REQUEST_TIME' => 1794714012
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:40:52 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 03:40:52 [::1][2][-][info][application] $_GET = [
+    'entity' => 'patients'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '62636'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/patients'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/patients'
+    'PHP_SELF' => '/index.php/api/v1/master/patients'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '0ced63d3-7526-41a5-9c5f-2a875e069910'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794714052.0204
+    'REQUEST_TIME' => 1794714052
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:43:34 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/v1/visits/update-status/1". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php:556
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('api/v1/visits/u...', Array)
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Halaman tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php:117
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#2 {main}
+2026-11-15 03:43:34 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '62765'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visits/update-status/1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visits/update-status/1'
+    'PHP_SELF' => '/index.php/api/v1/visits/update-status/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '9911b76f-7053-49d3-809a-fda09b9cc3f7'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794714214.7622
+    'REQUEST_TIME' => 1794714214
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:43:39 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/v1/visits/update-status/1". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php:556
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('api/v1/visits/u...', Array)
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Halaman tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php:117
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#2 {main}
+2026-11-15 03:43:39 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61917'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visits/update-status/1'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visits/update-status/1'
+    'PHP_SELF' => '/index.php/api/v1/visits/update-status/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '2542ae57-cbc6-4e27-a083-1436c61ead5b'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794714219.7128
+    'REQUEST_TIME' => 1794714219
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:43:45 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/v1/visits/update-status/1". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php:556
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('api/v1/visits/u...', Array)
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Halaman tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php:117
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#2 {main}
+2026-11-15 03:43:45 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61919'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visits/update-status/1'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visits/update-status/1'
+    'PHP_SELF' => '/index.php/api/v1/visits/update-status/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '27d3192e-726e-4348-9ddf-a4be1a72e3a1'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794714225.01
+    'REQUEST_TIME' => 1794714225
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:45:07 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/v1/visits/update-status/1". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php:556
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('api/v1/visits/u...', Array)
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Halaman tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php:117
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#2 {main}
+2026-11-15 03:45:07 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '62143'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visits/update-status/1'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visits/update-status/1'
+    'PHP_SELF' => '/index.php/api/v1/visits/update-status/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'c994319c-d230-4255-95d6-fa1626d021fe'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794714307.5673
+    'REQUEST_TIME' => 1794714307
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:45:08 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/v1/visits/update-status/1". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php:556
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('api/v1/visits/u...', Array)
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Halaman tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php:117
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#2 {main}
+2026-11-15 03:45:08 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '62145'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visits/update-status/1'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visits/update-status/1'
+    'PHP_SELF' => '/index.php/api/v1/visits/update-status/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'afa8d8ce-b4ff-42a1-9cac-e4e5a6de29a1'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794714308.6878
+    'REQUEST_TIME' => 1794714308
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:45:23 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/v1/visits/update-status/1". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php:556
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('api/v1/visits/u...', Array)
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Halaman tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php:117
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#2 {main}
+2026-11-15 03:45:23 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '62147'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visits/update-status/1'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visits/update-status/1'
+    'PHP_SELF' => '/index.php/api/v1/visits/update-status/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7f25622a-21da-4804-8bb5-5ade61ddf40d'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794714323.0698
+    'REQUEST_TIME' => 1794714323
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 03:45:24 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/v1/visits/update-status/1". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php:556
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('api/v1/visits/u...', Array)
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Halaman tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php:117
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#2 {main}
+2026-11-15 03:45:24 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '62149'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visits/update-status/1'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visits/update-status/1'
+    'PHP_SELF' => '/index.php/api/v1/visits/update-status/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7a98d619-27aa-4e59-8f6c-d046e9bfb130'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794714324.2022
+    'REQUEST_TIME' => 1794714324
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 04:04:10 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('waiting', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/medical-reco...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 04:04:09 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50319'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/medical-records/waiting'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/medical-records/waiting'
+    'PHP_SELF' => '/index.php/api/v1/medical-records/waiting'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'fc069664-e424-463f-b865-38d6deead6e4'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794715449.9666
+    'REQUEST_TIME' => 1794715449
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:04:21 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('waiting', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/medical-reco...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 04:04:21 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50324'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/medical-records/waiting'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/medical-records/waiting'
+    'PHP_SELF' => '/index.php/api/v1/medical-records/waiting'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '2d2307f5-1e53-428e-a42f-92765fa21abd'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794715461.2279
+    'REQUEST_TIME' => 1794715461
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:04:27 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('waiting', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/medical-reco...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 04:04:27 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50329'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/medical-records/waiting'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/medical-records/waiting'
+    'PHP_SELF' => '/index.php/api/v1/medical-records/waiting'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'c3ed98ae-979a-4bb6-9407-087c91de5fc1'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794715467.634
+    'REQUEST_TIME' => 1794715467
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:04:35 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('waiting', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/medical-reco...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 04:04:35 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50334'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/medical-records/waiting'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/medical-records/waiting'
+    'PHP_SELF' => '/index.php/api/v1/medical-records/waiting'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'be9f0088-80a0-4cdb-b964-475e6ba7b718'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794715475.1397
+    'REQUEST_TIME' => 1794715475
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:04:59 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('waiting', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/medical-reco...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 04:04:59 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50336'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/medical-records/waiting'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/medical-records/waiting'
+    'PHP_SELF' => '/index.php/api/v1/medical-records/waiting'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7372cf7a-9461-447d-ae8d-259c07ec279d'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794715499.6942
+    'REQUEST_TIME' => 1794715499
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:05:36 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('waiting', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/medical-reco...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 04:05:36 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '53173'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/medical-records/waiting'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/medical-records/waiting'
+    'PHP_SELF' => '/index.php/api/v1/medical-records/waiting'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '94c38274-d288-4502-b179-be7a704247f6'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794715536.0443
+    'REQUEST_TIME' => 1794715536
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:05:55 [::1][3][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 04:05:55 [::1][3][-][info][application] $_GET = [
+    'entity' => 'schedules'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '53175'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/schedules'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/schedules'
+    'PHP_SELF' => '/index.php/api/v1/master/schedules'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '5414212a-5e34-499c-8f84-aeebe170e0f3'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794715555.0386
+    'REQUEST_TIME' => 1794715555
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:05:59 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('waiting', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/medical-reco...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 04:05:59 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '53178'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/medical-records/waiting'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/medical-records/waiting'
+    'PHP_SELF' => '/index.php/api/v1/medical-records/waiting'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '32d50347-37ab-4899-90a9-8ef1ebab08f1'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794715559.8632
+    'REQUEST_TIME' => 1794715559
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:07:17 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('waiting', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/medical-reco...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 04:07:17 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '55833'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/medical-records/waiting'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/medical-records/waiting'
+    'PHP_SELF' => '/index.php/api/v1/medical-records/waiting'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '83528cc0-afaa-4d7d-bba1-169adbd40a37'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794715637.7374
+    'REQUEST_TIME' => 1794715637
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:07:34 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('waiting', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/medical-reco...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 04:07:34 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '55837'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/medical-records/waiting'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/medical-records/waiting'
+    'PHP_SELF' => '/index.php/api/v1/medical-records/waiting'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'd83b6517-fe5d-4d04-85cf-72e390191ad6'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794715654.4465
+    'REQUEST_TIME' => 1794715654
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:08:30 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('waiting', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/medical-reco...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 04:08:30 [::1][2][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '55845'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/medical-records/waiting'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/medical-records/waiting'
+    'PHP_SELF' => '/index.php/api/v1/medical-records/waiting'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '7c1a6746-072b-4d3c-924d-d37c946051d6'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794715710.051
+    'REQUEST_TIME' => 1794715710
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:22:46 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('create', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/visit-action...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 04:22:45 [::1][-][-][info][application] $_GET = [
+    'visit_id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '55626'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visit-actions/1'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visit-actions/1'
+    'PHP_SELF' => '/index.php/api/v1/visit-actions/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '99ddf25c-7235-4b61-b42e-bc318f2c21aa'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '32'
+    'HTTP_CONTENT_LENGTH' => '32'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794716565.9569
+    'REQUEST_TIME' => 1794716565
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:23:48 [::1][3][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 04:23:48 [::1][3][-][info][application] $_GET = [
+    'entity' => 'actions'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '60526'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/actions'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/actions'
+    'PHP_SELF' => '/index.php/api/v1/master/actions'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '02a5391d-22f8-4766-a7da-79ef24f55e78'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794716628.022
+    'REQUEST_TIME' => 1794716628
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:24:09 [::1][3][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 04:24:09 [::1][3][-][info][application] $_GET = [
+    'entity' => 'actions'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '60538'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/actions'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/actions'
+    'PHP_SELF' => '/index.php/api/v1/master/actions'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '3fcfcc6b-afed-43b8-b99e-316c4a6fa40b'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794716649.3883
+    'REQUEST_TIME' => 1794716649
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:26:26 [::1][3][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Data tindakan tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\VisitActionController.php:118
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\VisitActionController->actionDelete('1')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('delete', Array)
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/visit-action...', Array)
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#7 {main}
+2026-11-15 04:26:25 [::1][3][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59838'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visit-actions/1'
+    'REQUEST_METHOD' => 'DELETE'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visit-actions/1'
+    'PHP_SELF' => '/index.php/api/v1/visit-actions/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '59b24bad-6f0a-4d2f-94dc-0e0b9f75061a'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794716785.8909
+    'REQUEST_TIME' => 1794716785
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:26:30 [::1][3][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Data tindakan tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\VisitActionController.php:118
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\VisitActionController->actionDelete('1')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('delete', Array)
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/visit-action...', Array)
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#7 {main}
+2026-11-15 04:26:29 [::1][3][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59841'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/visit-actions/1'
+    'REQUEST_METHOD' => 'DELETE'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/visit-actions/1'
+    'PHP_SELF' => '/index.php/api/v1/visit-actions/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'b6242b5b-407b-484e-8280-f2bd6541fa98'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794716789.7555
+    'REQUEST_TIME' => 1794716789
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:34:29 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('create', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/prescription...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 04:34:29 [::1][-][-][info][application] $_GET = [
+    'visit_id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '51491'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/prescriptions/1'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/prescriptions/1'
+    'PHP_SELF' => '/index.php/api/v1/prescriptions/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'f96f0100-7dfe-451f-8938-cbe9b39954c9'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '335'
+    'HTTP_CONTENT_LENGTH' => '335'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794717269.299
+    'REQUEST_TIME' => 1794717269
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:41:34 [::1][4][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Resep tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\PrescriptionController.php:173
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\PrescriptionController->actionDelete('2')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('delete', Array)
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/prescription...', Array)
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#7 {main}
+2026-11-15 04:41:34 [::1][4][-][info][application] $_GET = [
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '51734'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/prescriptions/2'
+    'REQUEST_METHOD' => 'DELETE'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/prescriptions/2'
+    'PHP_SELF' => '/index.php/api/v1/prescriptions/2'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '638a6b87-d868-4ddd-9c07-8ed650ac4827'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794717694.41
+    'REQUEST_TIME' => 1794717694
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 04:43:16 [::1][4][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Resep tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\PrescriptionController.php:173
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\PrescriptionController->actionDelete('1')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('delete', Array)
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/prescription...', Array)
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#7 {main}
+2026-11-15 04:43:16 [::1][4][-][info][application] $_GET = [
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '51624'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/prescriptions/1'
+    'REQUEST_METHOD' => 'DELETE'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/prescriptions/1'
+    'PHP_SELF' => '/index.php/api/v1/prescriptions/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '8ac98c2c-3296-45d4-83c3-fce9268fde62'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794717796.4583
+    'REQUEST_TIME' => 1794717796
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]

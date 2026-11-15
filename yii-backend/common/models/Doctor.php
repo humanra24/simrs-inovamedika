@@ -14,8 +14,8 @@ use Yii;
  * @property string|null $phone_number
  * @property string|null $created_at
  *
- * @property DoctorSchedules[] $doctorSchedules
- * @property Polyclinics $polyclinic
+ * @property DoctorSchedule[] $doctorSchedules
+ * @property Polyclinic $polyclinic
  */
 class Doctor extends \yii\db\ActiveRecord
 {
