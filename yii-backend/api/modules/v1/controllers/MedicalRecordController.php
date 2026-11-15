@@ -37,9 +37,44 @@ class MedicalRecordController extends Controller
             ->with(['patient', 'doctor', 'polyclinic'])
             ->where(['status' => Visit::STATUS_WAITING])
             ->orderBy(['queue_number' => SORT_ASC])
+            ->asArray()
             ->all();
 
         return ['status' => 'success', 'total' => count($visits), 'data' => $visits];
+    }
+
+    public function actionHistory($visit_id = null)
+    {
+        $query = Visit::find()
+            ->with([
+                'patient',
+                'doctor',
+                'polyclinic',
+                'labOrders',
+                'labOrders.result',
+            ])
+            ->orderBy(['visit_date' => SORT_DESC]);
+
+        if ($visit_id !== null) {
+            if (!is_numeric($visit_id) || (int) $visit_id <= 0) {
+                Yii::$app->response->statusCode = 400;
+
+                return [
+                    'status' => 'error',
+                    'message' => 'ID pasien tidak valid.',
+                ];
+            }
+
+            $query->andWhere(['patient_id' => (int) $visit_id]);
+        }
+
+        $visits = $query->asArray()->all();
+
+        return [
+            'status' => 'success',
+            'total' => count($visits),
+            'data' => $visits,
+        ];
     }
 
     public function actionCreate($visit_id)

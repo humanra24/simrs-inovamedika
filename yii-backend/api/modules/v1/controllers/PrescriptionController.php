@@ -118,6 +118,32 @@ class PrescriptionController extends Controller
     }
 
     /**
+     * GET /api/v1/prescriptions/<visit_id>
+     * Mengambil detail resep berdasarkan ID Kunjungan
+     */
+    public function actionView($visit_id)
+    {
+        $prescription = Prescription::find()
+            ->with(['items.medicine'])
+            ->where(['visit_id' => $visit_id])
+            ->asArray()
+            ->one();
+
+        if (!$prescription) {
+            // Kembalikan data kosong jika belum ada resep (bukan error 404)
+            return [
+                'status' => 'success',
+                'data' => null
+            ];
+        }
+
+        return [
+            'status' => 'success',
+            'data' => $prescription
+        ];
+    }
+
+    /**
      * POST /api/v1/prescriptions/<id>/dispense
      * Petugas farmasi memproses penyerahan obat (stok berkurang)
      */

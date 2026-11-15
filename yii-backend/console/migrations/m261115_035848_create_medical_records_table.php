@@ -14,18 +14,22 @@ class m261115_035848_create_medical_records_table extends Migration
     {
         $this->createTable('{{%medical_records}}', [
             'id' => $this->primaryKey(),
-            'visit_id' => $this->integer()->notNull()->unique(), // 1 kunjungan = 1 rekam medis
-            'anamnesis' => $this->text(), // Keluhan pasien
-            'physical_exam' => $this->text(), // Hasil pemeriksaan fisik
-            'primary_diagnosis' => $this->string(255), // Diagnosis utama
-            'secondary_diagnosis' => $this->text(), // Diagnosis sekunder
-            // Tanda-tanda Vital
-            'blood_pressure' => $this->string(20), // e.g., "120/80"
-            'temperature' => $this->decimal(4, 1), // e.g., 36.5
-            'pulse' => $this->integer(), // Detak jantung per menit
-            'respiratory_rate' => $this->integer(), // Napas per menit
-            'weight' => $this->decimal(5, 2), // Berat badan (kg)
-            'height' => $this->decimal(5, 2), // Tinggi badan (cm)
+            'visit_id' => $this->integer()->notNull()->unique(),
+
+            // --- WAJIB DIISI (NOT NULL) ---
+            'anamnesis' => $this->text()->notNull(),
+            'physical_exam' => $this->text()->notNull(),
+            'primary_diagnosis' => $this->string(255)->notNull(),
+
+            // --- OPSIONAL (NULLABLE) ---
+            'secondary_diagnosis' => $this->text(),
+            'blood_pressure' => $this->string(20),
+            'temperature' => $this->decimal(4, 1),
+            'pulse' => $this->integer(),
+            'respiratory_rate' => $this->integer(),
+            'weight' => $this->decimal(5, 2),
+            'height' => $this->decimal(5, 2),
+
             'created_at' => $this->timestamp()->defaultExpression('CURRENT_TIMESTAMP'),
             'updated_at' => $this->timestamp()->defaultExpression('CURRENT_TIMESTAMP'),
         ]);

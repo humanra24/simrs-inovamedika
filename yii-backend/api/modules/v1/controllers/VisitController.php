@@ -134,24 +134,35 @@ class VisitController extends Controller
      * GET /api/v1/visits/history/<patient_id>
      * Menampilkan riwayat kunjungan pasien beserta hasil lab-nya
      */
-    public function actionHistory($patient_id)
+    public function actionHistory($patient_id = null)
     {
-        $visits = Visit::find()
+        $query = Visit::find()
             ->with([
+                'patient',
                 'doctor',
                 'polyclinic',
-                'labOrders',
-                'labOrders.result'
             ])
-            ->where(['patient_id' => $patient_id])
-            ->orderBy(['visit_date' => SORT_DESC])
-            ->asArray() // <-- TAMBAHKAN BARIS INI
-            ->all();
+            ->orderBy(['visit_date' => SORT_DESC]);
+
+        if ($patient_id !== null) {
+            if (!is_numeric($patient_id) || (int) $patient_id <= 0) {
+                Yii::$app->response->statusCode = 400;
+
+                return [
+                    'status' => 'error',
+                    'message' => 'ID pasien tidak valid.',
+                ];
+            }
+
+            $query->andWhere(['patient_id' => (int) $patient_id]);
+        }
+
+        $visits = $query->asArray()->all();
 
         return [
             'status' => 'success',
             'total' => count($visits),
-            'data' => $visits
+            'data' => $visits,
         ];
     }
 

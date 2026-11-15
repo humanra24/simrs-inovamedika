@@ -44,13 +44,15 @@ return [
                 'DELETE api/v1/master/<entity>/<id:\d+>' => 'v1/master-data/delete',
 
                 // Pendaftaran & Antrean
-                'PUT api/v1/visits/update-status/<id:\d+>' => 'v1/visit/update-status',
+                'GET api/v1/visits/history' => 'v1/visit/history',
                 'GET api/v1/visits/history/<patient_id:\d+>' => 'v1/visit/history',
                 'POST api/v1/visits/register' => 'v1/visit/register',
                 'GET api/v1/visits/queue' => 'v1/visit/queue',
+                'PUT api/v1/visits/update-status/<id:\d+>' => 'v1/visit/update-status',
 
                 // Pemeriksaan (EMR)
                 'GET api/v1/medical-records/waiting' => 'v1/medical-record/waiting',
+                'GET api/v1/medical-records/history' => 'v1/medical-record/history',
                 'POST api/v1/medical-records/<visit_id:\d+>' => 'v1/medical-record/create',
                 'PUT api/v1/medical-records/<visit_id:\d+>' => 'v1/medical-record/update',
                 'GET api/v1/medical-records/<visit_id:\d+>' => 'v1/medical-record/view',
@@ -61,6 +63,8 @@ return [
                 'DELETE api/v1/visit-actions/<id:\d+>' => 'v1/visit-action/delete',
 
                 // Farmasi / Resep
+                'GET api/v1/prescriptions/<visit_id:\d+>' => 'v1/prescription/view',
+                'GET api/v1/prescriptions/<visit_id:\d+>' => 'v1/prescription/view',
                 'POST api/v1/prescriptions/<visit_id:\d+>' => 'v1/prescription/create',
                 'GET api/v1/prescriptions/pending' => 'v1/prescription/pending',
                 'POST api/v1/prescriptions/<id:\d+>/dispense' => 'v1/prescription/dispense',
