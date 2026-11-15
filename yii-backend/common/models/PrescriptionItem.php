@@ -71,4 +71,9 @@ class PrescriptionItem extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Medicine::class, ['id' => 'medicine_id']);
     }
+
+    public function getPrescription()
+    {
+        return $this->hasOne(Prescription::class, ['id' => 'prescription_id']);
+    }
 }

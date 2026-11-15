@@ -5284,3 +5284,165 @@ $_SERVER = [
     'DB_PASSWORD' => '123'
     'JWT_SECRET' => 'RAHASIAKU_1234567890'
 ]
+2026-11-15 07:48:11 [::1][1][-][error][yii\base\InvalidArgumentException] yii\base\UnknownMethodException: Calling unknown method: common\models\PrescriptionItem::getprescription() in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php:315
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1257): yii\base\Component->__call('getprescription', Array)
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(556): yii\db\BaseActiveRecord->getRelation('prescription')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(471): yii\db\ActiveQuery->joinWithRelations(Object(common\models\PrescriptionItem), Array, 'LEFT JOIN')
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(155): yii\db\ActiveQuery->buildJoinWith()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\QueryBuilder.php(229): yii\db\ActiveQuery->prepare(Object(yii\db\pgsql\QueryBuilder))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(337): yii\db\QueryBuilder->build(Object(yii\db\ActiveQuery))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(142): yii\db\Query->all(NULL)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\ReportController.php(100): yii\db\ActiveQuery->all()
+#9 [internal function]: api\modules\v1\controllers\ReportController->actionMedicines()
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('medicines', Array)
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/report/medic...', Array)
+#14 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#16 {main}
+
+Next yii\base\InvalidArgumentException: common\models\PrescriptionItem has no relation named "prescription". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\BaseActiveRecord.php:1260
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(556): yii\db\BaseActiveRecord->getRelation('prescription')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(471): yii\db\ActiveQuery->joinWithRelations(Object(common\models\PrescriptionItem), Array, 'LEFT JOIN')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(155): yii\db\ActiveQuery->buildJoinWith()
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\QueryBuilder.php(229): yii\db\ActiveQuery->prepare(Object(yii\db\pgsql\QueryBuilder))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(337): yii\db\QueryBuilder->build(Object(yii\db\ActiveQuery))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(142): yii\db\Query->all(NULL)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\ReportController.php(100): yii\db\ActiveQuery->all()
+#8 [internal function]: api\modules\v1\controllers\ReportController->actionMedicines()
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('medicines', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/report/medic...', Array)
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#15 {main}
+2026-11-15 07:48:11 [::1][1][-][info][application] $_GET = [
+    'start_date' => '2024-01-01'
+    'end_date' => '2026-12-31'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '53672'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/reports/medicines?start_date=2024-01-01&end_date=2026-12-31'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/reports/medicines'
+    'PHP_SELF' => '/index.php/api/v1/reports/medicines'
+    'QUERY_STRING' => 'start_date=2024-01-01&end_date=2026-12-31'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '3ea4e946-a76b-488e-b2e0-68eb6688e396'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794728891.5816
+    'REQUEST_TIME' => 1794728891
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 07:48:24 [::1][1][-][error][yii\base\InvalidArgumentException] yii\base\UnknownMethodException: Calling unknown method: common\models\PrescriptionItem::getprescription() in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php:315
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\BaseActiveRecord.php(1257): yii\base\Component->__call('getprescription', Array)
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(556): yii\db\BaseActiveRecord->getRelation('prescription')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(471): yii\db\ActiveQuery->joinWithRelations(Object(common\models\PrescriptionItem), Array, 'LEFT JOIN')
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(155): yii\db\ActiveQuery->buildJoinWith()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\QueryBuilder.php(229): yii\db\ActiveQuery->prepare(Object(yii\db\pgsql\QueryBuilder))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(337): yii\db\QueryBuilder->build(Object(yii\db\ActiveQuery))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(142): yii\db\Query->all(NULL)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\ReportController.php(100): yii\db\ActiveQuery->all()
+#9 [internal function]: api\modules\v1\controllers\ReportController->actionMedicines()
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('medicines', Array)
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/report/medic...', Array)
+#14 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#16 {main}
+
+Next yii\base\InvalidArgumentException: common\models\PrescriptionItem has no relation named "prescription". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\BaseActiveRecord.php:1260
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(556): yii\db\BaseActiveRecord->getRelation('prescription')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(471): yii\db\ActiveQuery->joinWithRelations(Object(common\models\PrescriptionItem), Array, 'LEFT JOIN')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(155): yii\db\ActiveQuery->buildJoinWith()
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\QueryBuilder.php(229): yii\db\ActiveQuery->prepare(Object(yii\db\pgsql\QueryBuilder))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(337): yii\db\QueryBuilder->build(Object(yii\db\ActiveQuery))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(249): yii\db\ActiveQuery->createCommand(Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(142): yii\db\Query->all(NULL)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\ReportController.php(100): yii\db\ActiveQuery->all()
+#8 [internal function]: api\modules\v1\controllers\ReportController->actionMedicines()
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('medicines', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/report/medic...', Array)
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#15 {main}
+2026-11-15 07:48:24 [::1][1][-][info][application] $_GET = [
+    'start_date' => '2024-01-01'
+    'end_date' => '2026-12-31'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '53675'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/reports/medicines?start_date=2024-01-01&end_date=2026-12-31'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/reports/medicines'
+    'PHP_SELF' => '/index.php/api/v1/reports/medicines'
+    'QUERY_STRING' => 'start_date=2024-01-01&end_date=2026-12-31'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '453a8a05-47f9-422c-bedb-8206f89c8c15'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794728904.0438
+    'REQUEST_TIME' => 1794728904
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]

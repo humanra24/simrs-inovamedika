@@ -78,6 +78,11 @@ return [
                 'GET api/v1/bills/<visit_id:\d+>' => 'v1/billing/view',
                 'POST api/v1/bills/<bill_id:\d+>/pay' => 'v1/billing/pay',
                 'GET api/v1/bills/<visit_id:\d+>/invoice' => 'v1/billing/invoice',
+
+                // Reports
+                'GET api/v1/reports/visits' => 'v1/report/visits',
+                'GET api/v1/reports/bills' => 'v1/report/bills',
+                'GET api/v1/reports/medicines' => 'v1/report/medicines',
             ],
         ],
         'jwt' => [
