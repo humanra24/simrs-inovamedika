@@ -1,0 +1,418 @@
+2026-11-14 23:22:49 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "v1/patient/index". in D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Module.php:556
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/patient/inde...', Array)
+#1 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Works\Inova Medika Solusindo\Test\yii-backend\api\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\web\Application.php:117
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Works\Inova Medika Solusindo\Test\yii-backend\api\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2026-11-14 23:22:49 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1443242452.1782749288'
+    '_ga_M8XTLPT6PW' => 'GS2.1.s1782811087$o2$g1$t1782811357$j20$l0$h0'
+    'appearance' => 'light'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\Test\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '56664'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/patients'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\Test\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/patients'
+    'PHP_SELF' => '/index.php/api/v1/patients'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not-A.Brand\";v=\"99\", \"Google Chrome\";v=\"157\", \"Chromium\";v=\"157\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,id;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.1443242452.1782749288; _ga_M8XTLPT6PW=GS2.1.s1782811087$o2$g1$t1782811357$j20$l0$h0; appearance=light'
+    'REQUEST_TIME_FLOAT' => 1794698569.1053
+    'REQUEST_TIME' => 1794698569
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-14 23:40:51 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/v1/auth/login". in D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Module.php:556
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('api/v1/auth/log...', Array)
+#1 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Works\Inova Medika Solusindo\Test\yii-backend\api\web\index.php(17): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\web\Application.php:117
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Works\Inova Medika Solusindo\Test\yii-backend\api\web\index.php(17): yii\base\Application->run()
+#2 {main}
+2026-11-14 23:40:51 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1443242452.1782749288'
+    '_ga_M8XTLPT6PW' => 'GS2.1.s1782811087$o2$g1$t1782811357$j20$l0$h0'
+    'appearance' => 'light'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\Test\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '56169'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/auth/login'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\Test\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/auth/login'
+    'PHP_SELF' => '/index.php/api/v1/auth/login'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not-A.Brand\";v=\"99\", \"Google Chrome\";v=\"157\", \"Chromium\";v=\"157\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,id;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.1443242452.1782749288; _ga_M8XTLPT6PW=GS2.1.s1782811087$o2$g1$t1782811357$j20$l0$h0; appearance=light'
+    'REQUEST_TIME_FLOAT' => 1794699651.5552
+    'REQUEST_TIME' => 1794699651
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-14 23:54:08 [::1][-][-][error][yii\base\ErrorException:8192] yii\base\ErrorException: sizeg\jwt\Jwt::getBuilder(): Implicitly marking parameter $encoder as nullable is deprecated, the explicit nullable type must be used instead in D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\sizeg\yii2-jwt\Jwt.php:52
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\BaseYii.php(296): yii\base\ErrorHandler->handleError(8192, 'sizeg\\jwt\\Jwt::...', 'D:\\Works\\Inova ...', 52)
+#1 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\BaseYii.php(296): include()
+#2 [internal function]: yii\BaseYii::autoload('sizeg\\jwt\\Jwt')
+#3 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\di\Container.php(517): ReflectionClass->__construct('sizeg\\jwt\\Jwt')
+#4 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\di\Container.php(392): yii\di\Container->getDependencies('sizeg\\jwt\\Jwt')
+#5 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\di\Container.php(174): yii\di\Container->build('sizeg\\jwt\\Jwt', Array, Array)
+#6 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\BaseYii.php(370): yii\di\Container->get('sizeg\\jwt\\Jwt', Array, Array)
+#7 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\di\ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#8 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Module.php(773): yii\di\ServiceLocator->get('jwt', true)
+#9 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\di\ServiceLocator.php(74): yii\base\Module->get('jwt')
+#10 D:\Works\Inova Medika Solusindo\Test\yii-backend\common\models\User.php(221): yii\di\ServiceLocator->__get('jwt')
+#11 D:\Works\Inova Medika Solusindo\Test\yii-backend\api\modules\v1\controllers\AuthController.php(21): common\models\User->getJwtToken()
+#12 [internal function]: api\modules\v1\controllers\AuthController->actionLogin()
+#13 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#14 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#15 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('login', Array)
+#16 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/auth/login', Array)
+#17 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 D:\Works\Inova Medika Solusindo\Test\yii-backend\api\web\index.php(17): yii\base\Application->run()
+#19 {main}
+2026-11-14 23:54:06 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\Test\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '64578'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/auth/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\Test\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/auth/login'
+    'PHP_SELF' => '/index.php/api/v1/auth/login'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '488d3c8c-9785-458f-94d9-d4cc2176f534'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '58'
+    'HTTP_CONTENT_LENGTH' => '58'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794700446.6821
+    'REQUEST_TIME' => 1794700446
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-14 23:55:27 [::1][-][-][error][yii\base\ErrorException:8192] yii\base\ErrorException: sizeg\jwt\Jwt::getBuilder(): Implicitly marking parameter $encoder as nullable is deprecated, the explicit nullable type must be used instead in D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\sizeg\yii2-jwt\Jwt.php:52
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\BaseYii.php(296): yii\base\ErrorHandler->handleError(8192, 'sizeg\\jwt\\Jwt::...', 'D:\\Works\\Inova ...', 52)
+#1 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\BaseYii.php(296): include()
+#2 [internal function]: yii\BaseYii::autoload('sizeg\\jwt\\Jwt')
+#3 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\di\Container.php(517): ReflectionClass->__construct('sizeg\\jwt\\Jwt')
+#4 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\di\Container.php(392): yii\di\Container->getDependencies('sizeg\\jwt\\Jwt')
+#5 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\di\Container.php(174): yii\di\Container->build('sizeg\\jwt\\Jwt', Array, Array)
+#6 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\BaseYii.php(370): yii\di\Container->get('sizeg\\jwt\\Jwt', Array, Array)
+#7 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\di\ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#8 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Module.php(773): yii\di\ServiceLocator->get('jwt', true)
+#9 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\di\ServiceLocator.php(74): yii\base\Module->get('jwt')
+#10 D:\Works\Inova Medika Solusindo\Test\yii-backend\common\models\User.php(221): yii\di\ServiceLocator->__get('jwt')
+#11 D:\Works\Inova Medika Solusindo\Test\yii-backend\api\modules\v1\controllers\AuthController.php(21): common\models\User->getJwtToken()
+#12 [internal function]: api\modules\v1\controllers\AuthController->actionLogin()
+#13 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#14 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#15 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('login', Array)
+#16 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/auth/login', Array)
+#17 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 D:\Works\Inova Medika Solusindo\Test\yii-backend\api\web\index.php(17): yii\base\Application->run()
+#19 {main}
+2026-11-14 23:55:25 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\Test\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '60797'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/auth/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\Test\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/auth/login'
+    'PHP_SELF' => '/index.php/api/v1/auth/login'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '524d3500-bdef-48f5-9148-987c066f9ece'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '58'
+    'HTTP_CONTENT_LENGTH' => '58'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794700525.8446
+    'REQUEST_TIME' => 1794700525
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-14 23:55:41 [::1][-][-][error][yii\base\ErrorException:8192] yii\base\ErrorException: sizeg\jwt\Jwt::getBuilder(): Implicitly marking parameter $encoder as nullable is deprecated, the explicit nullable type must be used instead in D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\sizeg\yii2-jwt\Jwt.php:52
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\BaseYii.php(296): yii\base\ErrorHandler->handleError(8192, 'sizeg\\jwt\\Jwt::...', 'D:\\Works\\Inova ...', 52)
+#1 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\BaseYii.php(296): include()
+#2 [internal function]: yii\BaseYii::autoload('sizeg\\jwt\\Jwt')
+#3 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\di\Container.php(517): ReflectionClass->__construct('sizeg\\jwt\\Jwt')
+#4 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\di\Container.php(392): yii\di\Container->getDependencies('sizeg\\jwt\\Jwt')
+#5 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\di\Container.php(174): yii\di\Container->build('sizeg\\jwt\\Jwt', Array, Array)
+#6 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\BaseYii.php(370): yii\di\Container->get('sizeg\\jwt\\Jwt', Array, Array)
+#7 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\di\ServiceLocator.php(137): yii\BaseYii::createObject(Array)
+#8 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Module.php(773): yii\di\ServiceLocator->get('jwt', true)
+#9 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\di\ServiceLocator.php(74): yii\base\Module->get('jwt')
+#10 D:\Works\Inova Medika Solusindo\Test\yii-backend\common\models\User.php(221): yii\di\ServiceLocator->__get('jwt')
+#11 D:\Works\Inova Medika Solusindo\Test\yii-backend\api\modules\v1\controllers\AuthController.php(21): common\models\User->getJwtToken()
+#12 [internal function]: api\modules\v1\controllers\AuthController->actionLogin()
+#13 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#14 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#15 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('login', Array)
+#16 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/auth/login', Array)
+#17 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 D:\Works\Inova Medika Solusindo\Test\yii-backend\api\web\index.php(17): yii\base\Application->run()
+#19 {main}
+2026-11-14 23:55:40 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\Test\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '60800'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/auth/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\Test\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/auth/login'
+    'PHP_SELF' => '/index.php/api/v1/auth/login'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'a21918c7-03cb-4135-866a-53986684cb8f'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '58'
+    'HTTP_CONTENT_LENGTH' => '58'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794700539.9951
+    'REQUEST_TIME' => 1794700539
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-14 23:56:09 [::1][-][-][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: sizeg\jwt\Jwt::getSigner() in D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Component.php:315
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\Test\yii-backend\common\models\User.php(222): yii\base\Component->__call('getSigner', Array)
+#1 D:\Works\Inova Medika Solusindo\Test\yii-backend\api\modules\v1\controllers\AuthController.php(21): common\models\User->getJwtToken()
+#2 [internal function]: api\modules\v1\controllers\AuthController->actionLogin()
+#3 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#4 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#5 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('login', Array)
+#6 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/auth/login', Array)
+#7 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 D:\Works\Inova Medika Solusindo\Test\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#9 {main}
+2026-11-14 23:56:08 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\Test\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '60807'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/auth/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\Test\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/auth/login'
+    'PHP_SELF' => '/index.php/api/v1/auth/login'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '1b154e8d-27e3-4454-a7da-31e1424f210c'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '58'
+    'HTTP_CONTENT_LENGTH' => '58'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794700568.427
+    'REQUEST_TIME' => 1794700568
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 00:04:26 [::1][-][-][error][yii\base\NotSupportedException] yii\base\NotSupportedException: "findIdentityByAccessToken" is not implemented. in D:\Works\Inova Medika Solusindo\Test\yii-backend\common\models\User.php:75
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\web\User.php(305): common\models\User::findIdentityByAccessToken('eyJ0eXAiOiJKV1Q...', 'yii\\filters\\aut...')
+#1 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\filters\auth\HttpHeaderAuth.php(67): yii\web\User->loginByAccessToken('eyJ0eXAiOiJKV1Q...', 'yii\\filters\\aut...')
+#2 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(62): yii\filters\auth\HttpHeaderAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#3 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\IndexAction))
+#4 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#6 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#7 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\rest\IndexAction))
+#8 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\rest\IndexAction))
+#9 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#10 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/patient/inde...', Array)
+#11 D:\Works\Inova Medika Solusindo\Test\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 D:\Works\Inova Medika Solusindo\Test\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#13 {main}
+2026-11-15 00:04:26 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\Test\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '57413'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/patients'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\Test\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/patients'
+    'PHP_SELF' => '/index.php/api/v1/patients'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '8dd8c26b-8468-4f80-8600-26c9d7d36507'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794701066.0741
+    'REQUEST_TIME' => 1794701066
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
