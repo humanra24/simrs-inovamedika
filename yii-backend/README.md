@@ -1,259 +1,516 @@
-<p align="center">
-    <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://www.yiiframework.com/image/design/logo/yii3_full_for_dark.svg">
-        <source media="(prefers-color-scheme: light)" srcset="https://www.yiiframework.com/image/design/logo/yii3_full_for_light.svg">
-        <img src="https://www.yiiframework.com/image/design/logo/yii3_full_for_light.svg" alt="Yii Framework" height="100">
-    </picture>
-    <h1 align="center">Yii 2 Advanced Project Template</h1>
-    <br>
-</p>
+# Yii2 Backend – SIMRS Inovamedika
 
-Yii 2 Advanced Project Template is a skeleton [Yii 2](https://www.yiiframework.com/) application best for
-developing complex Web applications with multiple tiers.
+Yii2 Backend merupakan backend utama untuk aplikasi **SIMRS Rawat Jalan Inovamedika** yang dibangun menggunakan Yii2 Advanced Template.
 
-The template includes three tiers: front end, back end, and console, each of which
-is a separate Yii application.
+Backend ini bertanggung jawab atas seluruh proses bisnis utama rumah sakit, mulai dari pengelolaan master data, pendaftaran pasien, antrean, rekam medis elektronik (EMR), tindakan medis, farmasi, pemeriksaan laboratorium, hingga billing dan pembayaran.
 
-The template is designed to work in a team development environment. It supports
-deploying the application in different environments.
+Aplikasi menggunakan arsitektur REST API sehingga dapat diintegrasikan dengan React sebagai frontend utama dan Node.js sebagai backend services pendukung.
 
-Documentation is at [docs/guide/README.md](docs/guide/README.md).
+---
 
-[![Latest Stable Version](https://img.shields.io/packagist/v/yiisoft/yii2-app-advanced.svg?style=for-the-badge&label=Stable&logo=packagist)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![Total Downloads](https://img.shields.io/packagist/dt/yiisoft/yii2-app-advanced.svg?style=for-the-badge&label=Downloads)](https://packagist.org/packages/yiisoft/yii2-app-advanced)
-[![build](https://img.shields.io/github/actions/workflow/status/yiisoft/yii2-app-advanced/build.yml?style=for-the-badge&logo=github&label=Build)](https://github.com/yiisoft/yii2-app-advanced/actions?query=workflow%3Abuild)
-[![Static Analysis](https://img.shields.io/github/actions/workflow/status/yiisoft/yii2-app-advanced/static.yml?style=for-the-badge&label=Static)](https://github.com/yiisoft/yii2-app-advanced/actions/workflows/static.yml)
+## 🏗️ Arsitektur & Pembagian Tanggung Jawab
 
-## Docker
+Sistem menggunakan pemisahan tanggung jawab antara Yii2 sebagai backend utama dan Node.js sebagai backend services.
 
-[![Apache](https://img.shields.io/github/actions/workflow/status/yiisoft/yii2-app-advanced/docker.yml?style=for-the-badge&logo=apache&label=Apache)](https://github.com/yiisoft/yii2-app-advanced/actions/workflows/docker.yml)
+| Aspek            | Yii2 (Backend Utama)                            | Node.js (Backend Services)              |
+| ---------------- | ----------------------------------------------- | --------------------------------------- |
+| Domain           | Master Data, Pendaftaran, EMR, Farmasi, Billing | Integrasi Lab, Agregasi Dashboard       |
+| Akses Database   | Read & Write (Full CRUD)                        | Read-Only (SELECT)                      |
+| Sumber Kebenaran | Single Source of Truth                          | Hanya membaca data                      |
+| Autentikasi      | Custom JWT + RBAC                               | JWT Middleware (Shared Secret)          |
+| Komunikasi       | Menyediakan REST API untuk React dan Node.js    | Memanggil API Yii2 dan membaca database |
 
-REQUIREMENTS
-------------
+### Prinsip Arsitektur
 
-> [!IMPORTANT]
-> - The minimum required [PHP](https://www.php.net/) version of Yii is PHP `8.2`.
+- **Single Source of Truth:** Yii2 menjadi sumber kebenaran seluruh data transaksi SIMRS.
+- **Separation of Concerns:** Setiap backend memiliki tanggung jawab domain yang berbeda.
+- **Role-Based Access Control:** Hak akses pengguna dibatasi berdasarkan peran masing-masing.
+- **Data Integrity:** Seluruh perubahan data transaksi dilakukan melalui backend Yii2.
 
-## Install via Composer
+**Catatan penting:** Node.js tidak diperbolehkan melakukan operasi `INSERT`, `UPDATE`, maupun `DELETE` secara langsung terhadap tabel transaksi utama seperti `visits`, `bills`, dan `prescriptions`. Untuk integrasi hasil laboratorium, Node.js meneruskan data melalui REST API Yii2.
 
-If you do not have [Composer](https://getcomposer.org/), you may install it by following the instructions
-at [getcomposer.org](https://getcomposer.org/doc/00-intro.md#installation-nix).
+---
 
-You can then install this project template using the following commands:
+## ⚙️ Teknologi yang Digunakan
 
-```bash
-composer create-project --prefer-dist yiisoft/yii2-app-advanced advanced
-cd advanced
-```
+| Teknologi              | Fungsi                     |
+| ---------------------- | -------------------------- |
+| PHP                    | Bahasa pemrograman backend |
+| Yii2 Advanced Template | Backend framework          |
+| PostgreSQL             | Database Management System |
+| Composer               | Dependency Manager         |
+| JWT                    | Autentikasi API            |
+| Yii2 RBAC              | Manajemen hak akses        |
+| PDO PostgreSQL         | Koneksi database           |
+| REST API               | Komunikasi antar aplikasi  |
 
-### Frontend
+## 📋 Prasyarat
 
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/images/frontend/home-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="docs/images/frontend/home-light.png">
-    <img src="docs/images/frontend/home-light.png" alt="Web Application Advanced - Frontend">
-</picture>
+Pastikan perangkat pengembangan telah memiliki:
 
-### Backend
+- PHP versi 8.0 atau lebih baru (direkomendasikan PHP 8.1 atau 8.2).
+- PostgreSQL versi 12 atau lebih baru.
+- Composer.
+- Ekstensi PHP:
+  - `pdo_pgsql`
+  - `mbstring`
+  - `gd` (untuk kebutuhan PDF Invoice)
 
-<picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/images/backend/home-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="docs/images/backend/home-light.png">
-    <img src="docs/images/backend/home-light.png" alt="Web Application Advanced - Backend">
-</picture>
+---
 
-DIRECTORY STRUCTURE
--------------------
+## 🛠️ Instalasi & Konfigurasi
 
-```
-common
-    config/              contains shared configurations
-    mail/                contains view files for e-mails
-    models/              contains model classes used in both backend and frontend
-    tests/               contains tests for common classes
-console
-    config/              contains console configurations
-    controllers/         contains console controllers (commands)
-    migrations/          contains database migrations
-    models/              contains console-specific model classes
-    runtime/             contains files generated during runtime
-backend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains backend configurations
-    controllers/         contains Web controller classes
-    models/              contains backend-specific model classes
-    runtime/             contains files generated during runtime
-    tests/               contains tests for backend application
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-frontend
-    assets/              contains application assets such as JavaScript and CSS
-    config/              contains frontend configurations
-    controllers/         contains Web controller classes
-    models/              contains frontend-specific model classes
-    runtime/             contains files generated during runtime
-    tests/               contains tests for frontend application
-    views/               contains view files for the Web application
-    web/                 contains the entry script and Web resources
-    widgets/             contains frontend widgets
-vendor/                  contains dependent 3rd-party packages
-environments/            contains environment-based overrides
-```
+### 1. Install Dependencies
 
-Initialize the application for the `Development` environment:
+Masuk ke direktori backend:
 
 ```bash
-php init --env=Development --overwrite=All
+cd yii-backend
 ```
 
-Now you should be able to access the application through the following URLs, assuming `advanced` is the directory
-directly under the Web root.
-
-```
-http://localhost/advanced/frontend/web/
-http://localhost/advanced/backend/web/
-```
-
-## Install with Docker
-
-Build and start the containers:
+Install seluruh dependency menggunakan Composer:
 
 ```bash
-docker compose up -d --build
+composer install
 ```
 
-Install dependencies inside the container:
+### 2. Konfigurasi Environment
+
+Salin file `.env.example` menjadi `.env`, kemudian sesuaikan konfigurasi berikut:
+
+```env
+# Application
+YII_ENV=dev
+YII_DEBUG=true
+
+# Database PostgreSQL
+DB_DSN=pgsql:host=127.0.0.1;port=5432;dbname=simrs_db
+DB_USERNAME=postgres
+DB_PASSWORD=password_postgres_anda
+
+# JWT Secret
+JWT_SECRET=your_shared_jwt_secret
+```
+
+**Catatan:**
+
+- Sesuaikan konfigurasi database dengan environment PostgreSQL.
+- `JWT_SECRET` harus sama dengan secret key yang digunakan oleh Node.js untuk memvalidasi JWT.
+- Jangan menyimpan kredensial asli dalam repository.
+- Untuk production, nonaktifkan `YII_DEBUG` dan gunakan konfigurasi environment yang aman.
+
+### 3. Inisialisasi Aplikasi
+
+Jalankan perintah:
 
 ```bash
-docker compose exec frontend composer update --prefer-dist --no-interaction
+php init
 ```
 
-Initialize the application for the `Development` environment:
+Pilih environment:
 
-```bash
-docker compose exec frontend php /app/init --env=Development --overwrite=All
+```text
+[0] Development
 ```
 
-After running `init`, update the database connection in `common/config/main-local.php` to use the `mysql`
-service hostname:
+Kemudian konfirmasi dengan mengetik:
 
-```php
-'db' => [
-    'class' => \yii\db\Connection::class,
-    'dsn' => 'mysql:host=mysql;dbname=yii2advanced',
-    'username' => 'yii2advanced',
-    'password' => 'secret',
-    'charset' => 'utf8',
-],
+```text
+yes
 ```
 
-You can then access the application through the following URLs:
+### 4. Migrasi Database
 
-```
-http://127.0.0.1:20080  (frontend)
-http://127.0.0.1:21080  (backend)
-```
-
-To run the test suite, also update `common/config/test-local.php` to use the `mysql` hostname and create the
-test database:
-
-```php
-'db' => [
-    'dsn' => 'mysql:host=mysql;dbname=yii2advanced_test',
-],
-```
-
-```bash
-docker compose exec -T mysql mysql -uroot -pverysecret -e "CREATE DATABASE IF NOT EXISTS yii2advanced_test; GRANT ALL PRIVILEGES ON yii2advanced_test.* TO 'yii2advanced'@'%'; FLUSH PRIVILEGES;"
-docker compose exec -T frontend php /app/yii_test migrate --interactive=0
-docker compose exec -T frontend vendor/bin/codecept build
-docker compose exec -T frontend vendor/bin/codecept run
-```
-
-**NOTES:**
-- Minimum required Docker engine version `17.04` for development (see [Performance tuning for volume mounts](https://docs.docker.com/docker-for-mac/osxfs-caching/))
-- The default configuration uses a host-volume in your home directory `~/.composer-docker/cache` for Composer caches
-
-CONFIGURATION
--------------
-
-## Database
-
-Edit the file `common/config/main-local.php` with real data, for example:
-
-```php
-return [
-    'components' => [
-        'db' => [
-            'class' => \yii\db\Connection::class,
-            'dsn' => 'mysql:host=localhost;dbname=yii2advanced',
-            'username' => 'root',
-            'password' => '1234',
-            'charset' => 'utf8',
-        ],
-    ],
-];
-```
-
-When using Docker, the MySQL service is pre-configured. Update `common/config/main-local.php` to use:
-
-```php
-'db' => [
-    'class' => \yii\db\Connection::class,
-    'dsn' => 'mysql:host=mysql;dbname=yii2advanced',
-    'username' => 'yii2advanced',
-    'password' => 'secret',
-    'charset' => 'utf8',
-],
-```
-
-Apply migrations:
+Jalankan migrasi untuk membuat seluruh tabel utama SIMRS:
 
 ```bash
 php yii migrate
 ```
 
-Or with Docker:
+Selanjutnya, jalankan migrasi tabel RBAC bawaan Yii2:
 
 ```bash
-docker compose exec frontend php /app/yii migrate
+php yii migrate --migrationPath=@yii/rbac/migrations
 ```
 
-**NOTES:**
-- Yii won't create the database for you, this has to be done manually before you can access it.
-  When using Docker, the MySQL service creates the database automatically.
-- Check and edit the other files in the `config/` directories to customize your application as required.
-- Refer to the README in the `tests` directory for information specific to application tests.
+Migrasi ini mencakup tabel yang diperlukan untuk pengelolaan pengguna, data SIMRS, serta sistem hak akses.
 
-TESTING
--------
+### 5. Seed Role & User Dummy
 
-Tests are located in `frontend/tests`, `backend/tests`, and `common/tests` directories.
-They are developed with [Codeception PHP Testing Framework](https://codeception.com/).
-
-Tests can be executed by running:
+Jalankan perintah berikut untuk membuat enam role dan enam akun pengguna dummy:
 
 ```bash
-vendor/bin/codecept run --env php-builtin
+php yii rbac/init
 ```
 
-Or using the Composer script:
+Role yang disediakan:
+
+1. Administrator
+2. Petugas Pendaftaran
+3. Dokter
+4. Petugas Farmasi
+5. Petugas Laboratorium
+6. Kasir
+
+### 6. Menjalankan Server API
+
+Backend menggunakan direktori `api` sebagai entry point REST API karena antarmuka pengguna ditangani oleh React.
+
+Masuk ke direktori API:
 
 ```bash
-composer tests
+cd api
 ```
 
-## Support the project
+Jalankan development server:
 
-[![Open Collective](https://img.shields.io/badge/Open%20Collective-sponsor-7eadf1?style=for-the-badge&logo=open%20collective&logoColor=7eadf1&labelColor=555555)](https://opencollective.com/yiisoft)
+```bash
+php -S localhost:8080 -t web
+```
 
-## Follow updates
+Backend Yii2 dapat diakses melalui:
 
-[![Official website](https://img.shields.io/badge/Powered_by-Yii_Framework-green.svg?style=for-the-badge&logo=yii)](https://www.yiiframework.com/)
-[![Follow on X](https://img.shields.io/badge/-Follow%20on%20X-1DA1F2.svg?style=for-the-badge&logo=x&logoColor=white&labelColor=000000)](https://x.com/yiiframework)
-[![Telegram](https://img.shields.io/badge/telegram-join-1DA1F2?style=for-the-badge&logo=telegram)](https://t.me/yii_framework_in_english)
-[![Slack](https://img.shields.io/badge/slack-join-1DA1F2?style=for-the-badge&logo=slack)](https://yiiframework.com/go/slack)
+```text
+http://localhost:8080
+```
 
-## License
+---
 
-[![License](https://img.shields.io/badge/License-BSD--3--Clause-brightgreen.svg?style=for-the-badge&logo=opensourceinitiative&logoColor=white&labelColor=555555)](LICENSE.md)
+## 📡 Dokumentasi Endpoint REST API
+
+**Base URL**
+
+```text
+http://localhost:8080
+```
+
+Seluruh endpoint memerlukan autentikasi JWT, kecuali endpoint login.
+
+Header autentikasi:
+
+```http
+Authorization: Bearer <JWT_TOKEN>
+```
+
+### 1. Autentikasi (JWT)
+
+Digunakan untuk melakukan login dan mendapatkan token autentikasi.
+
+| Method | Endpoint             | Deskripsi                       |
+| ------ | -------------------- | ------------------------------- |
+| POST   | `/api/v1/auth/login` | Login dan mendapatkan JWT Token |
+
+**Contoh Request:**
+
+```http
+POST /api/v1/auth/login
+Content-Type: application/json
+```
+
+Request Body:
+
+```json
+{
+  "username": "admin",
+  "password": "123456"
+}
+```
+
+Response berisi token JWT yang digunakan untuk mengakses endpoint terproteksi.
+
+### 2. Master Data
+
+RBAC: Administrator.
+
+Modul master data menggunakan Dynamic Controller untuk mengelola enam entitas utama.
+
+| Method | Endpoint                     | Deskripsi                          |
+| ------ | ---------------------------- | ---------------------------------- |
+| GET    | `/api/v1/master/:entity`     | Daftar data, pencarian, dan filter |
+| POST   | `/api/v1/master/:entity`     | Menambahkan data                   |
+| GET    | `/api/v1/master/:entity/:id` | Detail data                        |
+| PUT    | `/api/v1/master/:entity/:id` | Memperbarui data                   |
+| DELETE | `/api/v1/master/:entity/:id` | Menghapus data                     |
+
+Entitas yang tersedia:
+
+- `patients` – Data pasien.
+- `polyclinics` – Data poli.
+- `doctors` – Data dokter.
+- `schedules` – Jadwal praktik dokter.
+- `actions` – Data tindakan medis dan tarif.
+- `medicines` – Data obat dan stok.
+
+Fitur tambahan:
+
+- Search menggunakan parameter `?q=`.
+- Filter data berdasarkan parameter yang tersedia.
+- Detail data berdasarkan ID.
+
+### 3. Pendaftaran & Antrean
+
+RBAC: Petugas Pendaftaran, Administrator.
+
+| Method | Endpoint                             | Deskripsi                                              |
+| ------ | ------------------------------------ | ------------------------------------------------------ |
+| POST   | `/api/v1/visits/register`            | Mendaftarkan pasien dan membuat nomor antrean otomatis |
+| GET    | `/api/v1/visits/queue`               | Melihat antrean hari ini                               |
+| GET    | `/api/v1/visits/history/:patient_id` | Melihat riwayat kunjungan pasien beserta hasil lab     |
+| PUT    | `/api/v1/visits/update-status/:id`   | Mengubah status kunjungan                              |
+
+Filter antrean dapat menggunakan parameter:
+
+```text
+?polyclinic_id=1
+```
+
+### 4. Pemeriksaan & Rekam Medis Elektronik (EMR)
+
+RBAC: Dokter, Administrator.
+
+| Method | Endpoint                            | Deskripsi                               |
+| ------ | ----------------------------------- | --------------------------------------- |
+| GET    | `/api/v1/medical-records/waiting`   | Daftar pasien yang menunggu pemeriksaan |
+| POST   | `/api/v1/medical-records/:visit_id` | Menyimpan rekam medis                   |
+| PUT    | `/api/v1/medical-records/:visit_id` | Memperbarui rekam medis                 |
+| GET    | `/api/v1/medical-records/:visit_id` | Melihat detail rekam medis              |
+
+Data rekam medis meliputi:
+
+- Anamnesis.
+- Diagnosis.
+- Tanda-tanda vital (Vital Signs).
+
+### 5. Tindakan Medis
+
+RBAC: Dokter, Administrator.
+
+| Method | Endpoint                          | Deskripsi                              |
+| ------ | --------------------------------- | -------------------------------------- |
+| GET    | `/api/v1/visit-actions/:visit_id` | Melihat daftar tindakan pada kunjungan |
+| POST   | `/api/v1/visit-actions/:visit_id` | Menambahkan tindakan medis             |
+| DELETE | `/api/v1/visit-actions/:id`       | Menghapus tindakan medis               |
+
+Setiap tindakan menggunakan snapshot harga agar perubahan tarif pada master data tidak mengubah tagihan transaksi yang sudah tercatat.
+
+### 6. Farmasi & Resep
+
+RBAC: Dokter, Petugas Farmasi, Administrator.
+
+| Method | Endpoint                             | Deskripsi                                    |
+| ------ | ------------------------------------ | -------------------------------------------- |
+| POST   | `/api/v1/prescriptions/:visit_id`    | Dokter membuat resep dengan validasi stok    |
+| GET    | `/api/v1/prescriptions/pending`      | Farmasi melihat daftar resep pending         |
+| POST   | `/api/v1/prescriptions/:id/dispense` | Farmasi menyerahkan obat dan mengurangi stok |
+| DELETE | `/api/v1/prescriptions/:id`          | Membatalkan resep yang masih pending         |
+
+Proses farmasi memperhatikan ketersediaan stok untuk menjaga konsistensi data persediaan obat.
+
+### 7. Pemeriksaan Penunjang / Laboratorium
+
+RBAC: Dokter, Petugas Laboratorium, Administrator.
+
+| Method | Endpoint                            | Deskripsi                                     |
+| ------ | ----------------------------------- | --------------------------------------------- |
+| POST   | `/api/v1/lab/orders/:visit_id`      | Dokter membuat order pemeriksaan laboratorium |
+| GET    | `/api/v1/lab/orders/pending`        | Petugas laboratorium melihat order pending    |
+| POST   | `/api/v1/lab/orders/:id/cancel`     | Membatalkan order laboratorium                |
+| POST   | `/api/v1/lab/results/:lab_order_id` | Menerima dan menyimpan hasil laboratorium     |
+| GET    | `/api/v1/lab/results/:visit_id`     | Dokter melihat hasil laboratorium             |
+
+Endpoint penerimaan hasil laboratorium juga digunakan oleh Node.js melalui mekanisme integrasi REST API.
+
+### 8. Billing & Pembayaran
+
+RBAC: Kasir, Administrator, Dokter.
+
+| Method | Endpoint                           | Deskripsi                                      |
+| ------ | ---------------------------------- | ---------------------------------------------- |
+| POST   | `/api/v1/bills/generate/:visit_id` | Membuat tagihan otomatis berdasarkan pelayanan |
+| GET    | `/api/v1/bills/:visit_id`          | Melihat detail tagihan dan rincian biaya       |
+| POST   | `/api/v1/bills/:bill_id/pay`       | Mencatat pembayaran dengan Idempotency Key     |
+| GET    | `/api/v1/bills/:visit_id/invoice`  | Menghasilkan Invoice PDF                       |
+
+Billing menggabungkan biaya pelayanan yang berasal dari tindakan medis, farmasi, dan komponen pelayanan lainnya sesuai implementasi sistem.
+
+### 9. Laporan Detail
+
+RBAC: Administrator, Kasir.
+
+| Method | Endpoint                    | Deskripsi                                      |
+| ------ | --------------------------- | ---------------------------------------------- |
+| GET    | `/api/v1/reports/visits`    | Rincian kunjungan berdasarkan periode          |
+| GET    | `/api/v1/reports/bills`     | Rincian tagihan berdasarkan periode dan status |
+| GET    | `/api/v1/reports/medicines` | Rekap penggunaan obat                          |
+
+---
+
+## 🔐 Keamanan (JWT & RBAC)
+
+### 1. JSON Web Token (JWT)
+
+Sistem menggunakan implementasi Custom JWT berbasis `hash_hmac` untuk melakukan signing dan validasi token tanpa bergantung pada library JWT tambahan.
+
+Token memuat informasi:
+
+| Field      | Keterangan              |
+| ---------- | ----------------------- |
+| `sub`      | ID pengguna             |
+| `username` | Username pengguna       |
+| `iat`      | Waktu token dibuat      |
+| `exp`      | Waktu kedaluwarsa token |
+
+Masa berlaku token adalah 24 jam.
+
+File implementasi:
+
+- `common/components/JwtAuth.php`
+- `common/models/User.php` – Method `getJwtToken()`.
+
+Token yang dihasilkan Yii2 juga digunakan oleh Node.js melalui shared secret untuk proses autentikasi antarservice.
+
+### 2. Role-Based Access Control (RBAC)
+
+Sistem menggunakan `yii\rbac\DbManager` untuk mengelola hak akses berdasarkan peran pengguna.
+
+Enam role yang tersedia:
+
+| Role                 | Tanggung Jawab                                  |
+| -------------------- | ----------------------------------------------- |
+| Administrator        | Mengelola seluruh modul dan master data         |
+| Petugas Pendaftaran  | Mengelola pendaftaran dan antrean               |
+| Dokter               | Mengelola pemeriksaan, EMR, tindakan, dan resep |
+| Petugas Farmasi      | Mengelola resep dan penyerahan obat             |
+| Petugas Laboratorium | Mengelola order dan hasil laboratorium          |
+| Kasir                | Mengelola billing dan pembayaran                |
+
+**RoleFilter**
+
+File: `common/components/RoleFilter.php`
+
+Middleware kustom ini digunakan untuk membatasi akses endpoint berdasarkan role yang telah ditentukan pada controller.
+
+Request dari pengguna yang tidak memiliki izin akan ditolak oleh sistem.
+
+---
+
+## 🧪 Penanganan Skenario Teknis (Sesuai Soal D)
+
+Backend dirancang untuk menangani beberapa skenario penting yang sering terjadi dalam sistem pelayanan rumah sakit.
+
+### 1. Pencegahan Duplikasi Pendaftaran
+
+Menggunakan Unique Constraint pada tabel `visits` dengan kombinasi:
+
+```text
+polyclinic_id
+visit_date
+queue_number
+```
+
+Jika terjadi konflik data akibat request bersamaan, sistem menangani `IntegrityException` sehingga nomor antrean tidak tercatat ganda.
+
+### 2. Pencegahan Stok Obat Minus
+
+Menggunakan Atomic Update melalui `Medicine::updateAllCounters` dengan kondisi stok yang mencukupi:
+
+```text
+stock >= quantity
+```
+
+Pendekatan ini membantu mencegah stok menjadi negatif akibat transaksi bersamaan.
+
+### 3. Pencegahan Pembayaran Ganda
+
+Menerapkan Idempotency Key pada tabel `payments` dengan Unique Constraint.
+
+Jika request pembayaran dengan key yang sama dikirim ulang, sistem mengembalikan hasil transaksi sebelumnya tanpa mencatat pembayaran baru.
+
+### 4. Snapshot Harga Transaksi
+
+Menggunakan snapshot harga pada `bill_items` dan `visit_actions`.
+
+Dengan demikian, perubahan harga pada master data tidak memengaruhi transaksi dan tagihan yang telah dibuat sebelumnya.
+
+### 5. Penanganan Gangguan Integrasi
+
+Komunikasi dengan layanan Node.js menggunakan REST API.
+
+Jika terjadi kegagalan komunikasi, mekanisme error handling dan retry pada sisi service integrasi membantu menangani request yang gagal.
+
+### 6. Optimasi Performa Database
+
+Beberapa pendekatan optimasi yang digunakan:
+
+- Indexing pada kolom `visit_date`.
+- Indexing pada kolom `full_name`.
+- Indexing pada kolom `nik`.
+- Eager Loading menggunakan `with()` untuk mengurangi masalah N+1 Query.
+
+---
+
+## 📂 Struktur Folder Utama
+
+```text
+yii-backend/
+│
+├── api/
+│   ├── config/             # Konfigurasi REST API dan CORS
+│   ├── modules/
+│   │   └── v1/             # Controller API versi 1
+│   └── views/
+│       └── billing/        # Template Invoice PDF
+│
+├── common/
+│   ├── components/         # JwtAuth, RoleFilter
+│   └── models/             # ActiveRecord Models
+│
+├── console/
+│   └── controllers/        # Console Controller dan RBAC Seeder
+│
+├── environments/           # Konfigurasi environment
+├── vendor/                 # Composer dependencies
+├── .env.example            # Contoh environment configuration
+└── README.md               # Dokumentasi backend
+```
+
+---
+
+## 🧪 Pengujian API dengan Postman
+
+Pengujian REST API dilakukan menggunakan Postman.
+
+Koleksi pengujian tersedia pada:
+
+```text
+docs/Postman_Collection.json
+```
+
+Beberapa skenario pengujian meliputi:
+
+1. Login dan autentikasi JWT.
+2. CRUD Master Data.
+3. Pendaftaran pasien dan pengelolaan antrean.
+4. Pemeriksaan dan penyimpanan EMR.
+5. Pengelolaan tindakan medis.
+6. Pembuatan resep dan pengeluaran obat.
+7. Order dan hasil pemeriksaan laboratorium.
+8. Pembuatan tagihan dan pembayaran.
+9. Pembuatan Invoice PDF.
+10. Pengujian hak akses berdasarkan role pengguna.
+
+---
+
+## 🎯 Kesimpulan
+
+Yii2 Backend merupakan pusat pengelolaan proses bisnis SIMRS Inovamedika yang memastikan seluruh transaksi dan data utama rumah sakit dikelola secara terpusat.
+
+Dengan dukungan JWT untuk autentikasi, RBAC untuk pembatasan hak akses, serta mekanisme integritas transaksi seperti Atomic Update, Unique Constraint, dan Idempotency Key, backend dirancang untuk menjaga keamanan dan konsistensi data.
+
+Integrasi dengan React sebagai frontend dan Node.js sebagai backend services melengkapi arsitektur sistem agar lebih modular, terstruktur, dan mudah dikembangkan.
+
+---
+
+**SIMRS Inovamedika**
+
+_Yii2 Backend – Main Business Logic & REST API_
