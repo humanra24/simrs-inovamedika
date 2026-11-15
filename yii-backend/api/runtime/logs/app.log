@@ -416,3 +416,1393 @@ $_SERVER = [
     'DB_USERNAME' => 'postgres'
     'DB_PASSWORD' => '123'
 ]
+2026-11-15 00:54:54 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/v1/patients". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php:556
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('api/v1/patients', Array)
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php:117
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#2 {main}
+2026-11-15 00:54:54 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61240'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/patients'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/patients'
+    'PHP_SELF' => '/index.php/api/v1/patients'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'a7748654-c470-41b7-b8fa-7d512f0967e9'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794704094.0684
+    'REQUEST_TIME' => 1794704094
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 00:54:56 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/v1/patients". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php:556
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('api/v1/patients', Array)
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php:117
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#2 {main}
+2026-11-15 00:54:56 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61242'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/patients'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/patients'
+    'PHP_SELF' => '/index.php/api/v1/patients'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'b65cb84f-9735-408d-b5c5-beafb51f7ecb'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794704096.53
+    'REQUEST_TIME' => 1794704096
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 00:55:16 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42703]: Undefined column: 7 ERROR:  kolom « entity » tidak ada
+LINE 1: SELECT COUNT(*) FROM "patients" WHERE "entity"=$1
+                                              ^ in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(497): yii\db\Command->queryScalar()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(361): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(69): yii\db\Query->count()
+#7 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('patients')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42703]: Undefined column: 7 ERROR:  kolom « entity » tidak ada
+LINE 1: SELECT COUNT(*) FROM "patients" WHERE "entity"=$1
+                                              ^
+The SQL being executed was: SELECT COUNT(*) FROM "patients" WHERE "entity"='patients' in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Schema.php:677
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(497): yii\db\Command->queryScalar()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(361): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(69): yii\db\Query->count()
+#7 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('patients')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42703
+    [1] => 7
+    [2] => ERROR:  kolom « entity » tidak ada
+LINE 1: SELECT COUNT(*) FROM "patients" WHERE "entity"=$1
+                                              ^
+)
+
+2026-11-15 00:55:16 [::1][-][-][info][application] $_GET = [
+    'entity' => 'patients'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '64439'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/patients'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/patients'
+    'PHP_SELF' => '/index.php/api/v1/master/patients'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '719ce65a-bb94-4259-bbd5-3ac49f9c1a10'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794704116.4584
+    'REQUEST_TIME' => 1794704116
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 00:56:52 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/v1/main/patients". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php:556
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('api/v1/main/pat...', Array)
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php:117
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#2 {main}
+2026-11-15 00:56:52 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50349'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/main/patients'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/main/patients'
+    'PHP_SELF' => '/index.php/api/v1/main/patients'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '17719e34-7c8c-4132-82c0-65857f84a414'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '247'
+    'HTTP_CONTENT_LENGTH' => '247'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794704212.805
+    'REQUEST_TIME' => 1794704212
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 01:11:39 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/v1/patients/00001". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php:556
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('api/v1/patients...', Array)
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Halaman tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php:117
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#2 {main}
+2026-11-15 01:11:39 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61283'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/patients/00001'
+    'REQUEST_METHOD' => 'DELETE'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/patients/00001'
+    'PHP_SELF' => '/index.php/api/v1/patients/00001'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '36c91e9b-d38c-4f4e-ac64-a9b74d13fa2f'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794705099.2442
+    'REQUEST_TIME' => 1794705099
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 01:11:50 [::1][-][-][error][Error] Error: Call to a member function findOne() on string in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php:161
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\MasterDataController->actionDelete('patients', '00001')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('delete', Array)
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#7 {main}
+2026-11-15 01:11:50 [::1][-][-][info][application] $_GET = [
+    'entity' => 'patients'
+    'id' => '00001'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61290'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/patients/00001'
+    'REQUEST_METHOD' => 'DELETE'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/patients/00001'
+    'PHP_SELF' => '/index.php/api/v1/master/patients/00001'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '26c4e287-f9bc-4f9f-9a55-337091a0e445'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794705110.2993
+    'REQUEST_TIME' => 1794705110
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 01:11:56 [::1][-][-][error][Error] Error: Call to a member function findOne() on string in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php:161
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\MasterDataController->actionDelete('patients', '00001')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('delete', Array)
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#7 {main}
+2026-11-15 01:11:56 [::1][-][-][info][application] $_GET = [
+    'entity' => 'patients'
+    'id' => '00001'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '61293'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/patients/00001'
+    'REQUEST_METHOD' => 'DELETE'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/patients/00001'
+    'PHP_SELF' => '/index.php/api/v1/master/patients/00001'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '0da479e4-ce38-4046-b596-764d48b6044d'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794705116.4408
+    'REQUEST_TIME' => 1794705116
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 01:18:05 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Entity tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php:48
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(101): api\modules\v1\controllers\MasterDataController->getModelClass('po;i')
+#1 [internal function]: api\modules\v1\controllers\MasterDataController->actionCreate('po;i')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('create', Array)
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#8 {main}
+2026-11-15 01:18:05 [::1][-][-][info][application] $_GET = [
+    'entity' => 'po;i'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '55182'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/po;i'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/po;i'
+    'PHP_SELF' => '/index.php/api/v1/master/po;i'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '0cd7674e-36d6-4ece-b66c-7592f2be6069'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794705485.2114
+    'REQUEST_TIME' => 1794705485
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 01:18:11 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Entity tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php:48
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(101): api\modules\v1\controllers\MasterDataController->getModelClass('poli')
+#1 [internal function]: api\modules\v1\controllers\MasterDataController->actionCreate('poli')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('create', Array)
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#8 {main}
+2026-11-15 01:18:10 [::1][-][-][info][application] $_GET = [
+    'entity' => 'poli'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '51348'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/poli'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/poli'
+    'PHP_SELF' => '/index.php/api/v1/master/poli'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '95910d6b-2b78-41e5-837d-ba9cb3f5dc6e'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794705490.9902
+    'REQUEST_TIME' => 1794705490
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 01:19:37 [::1][-][-][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "api/v1/master/polyclinics". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php:556
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('api/v1/master/p...', Array)
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Halaman tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php:117
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#2 {main}
+2026-11-15 01:19:37 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '51357'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/polyclinics'
+    'REQUEST_METHOD' => 'PUT'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/polyclinics'
+    'PHP_SELF' => '/index.php/api/v1/master/polyclinics'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'f0e225ad-f792-4652-b06e-f24544c1497d'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794705577.4153
+    'REQUEST_TIME' => 1794705577
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 01:22:14 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Entity tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php:48
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(59): api\modules\v1\controllers\MasterDataController->getModelClass('polyclinic')
+#1 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('polyclinic')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#8 {main}
+2026-11-15 01:22:14 [::1][-][-][info][application] $_GET = [
+    'entity' => 'polyclinic'
+    'q' => '00001'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '51379'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/polyclinic?q=00001'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/polyclinic'
+    'PHP_SELF' => '/index.php/api/v1/master/polyclinic'
+    'QUERY_STRING' => 'q=00001'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'b90050ca-46b5-4a44-834d-df78898104e8'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794705734.19
+    'REQUEST_TIME' => 1794705734
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 02:30:09 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('create', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 02:30:09 [::1][-][-][info][application] $_GET = [
+    'entity' => 'polyclinics'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '64318'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/polyclinics'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/polyclinics'
+    'PHP_SELF' => '/index.php/api/v1/master/polyclinics'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '8d93da7f-ec59-4703-8730-67c6dbd82432'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '65'
+    'HTTP_CONTENT_LENGTH' => '65'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794709809.0577
+    'REQUEST_TIME' => 1794709809
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 02:30:14 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Username atau password salah. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\AuthController.php:33
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\AuthController->actionLogin()
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('login', Array)
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/auth/login', Array)
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#7 {main}
+2026-11-15 02:30:14 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '64321'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/auth/login'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/auth/login'
+    'PHP_SELF' => '/index.php/api/v1/auth/login'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '5d83e105-e48d-4cc8-8b0a-2ae3fa02eb57'
+    'CONTENT_TYPE' => 'application/json'
+    'HTTP_CONTENT_TYPE' => 'application/json'
+    'CONTENT_LENGTH' => '58'
+    'HTTP_CONTENT_LENGTH' => '58'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794709814.3925
+    'REQUEST_TIME' => 1794709814
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 02:35:36 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Data tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php:164
+Stack trace:
+#0 [internal function]: api\modules\v1\controllers\MasterDataController->actionDelete('polyclinics', '2')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('delete', Array)
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#7 {main}
+2026-11-15 02:35:35 [::1][-][-][info][application] $_GET = [
+    'entity' => 'polyclinics'
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '52605'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/polyclinics/2'
+    'REQUEST_METHOD' => 'DELETE'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/polyclinics/2'
+    'PHP_SELF' => '/index.php/api/v1/master/polyclinics/2'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'f80b3621-e005-45ce-b33c-3a42310f8ed5'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794710135.9581
+    'REQUEST_TIME' => 1794710135
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 02:40:29 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42883]: Undefined function: 7 ERROR:  fungsi lower(integer) tidak ada
+LINE 1: SELECT COUNT(*) FROM "doctor_schedules" WHERE LOWER(day_of_w...
+                                                      ^
+HINT:  Tidak ada fungsi yang sesuai dengan nama dan tipe argumen yang diberikan.Anda mungkin perlu menambakan cast tipe eksplisit in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(497): yii\db\Command->queryScalar()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(361): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(84): yii\db\Query->count()
+#7 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('schedules')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42883]: Undefined function: 7 ERROR:  fungsi lower(integer) tidak ada
+LINE 1: SELECT COUNT(*) FROM "doctor_schedules" WHERE LOWER(day_of_w...
+                                                      ^
+HINT:  Tidak ada fungsi yang sesuai dengan nama dan tipe argumen yang diberikan.Anda mungkin perlu menambakan cast tipe eksplisit
+The SQL being executed was: SELECT COUNT(*) FROM "doctor_schedules" WHERE LOWER(day_of_week) LIKE '%andi%' in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Schema.php:677
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(497): yii\db\Command->queryScalar()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(361): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(84): yii\db\Query->count()
+#7 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('schedules')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42883
+    [1] => 7
+    [2] => ERROR:  fungsi lower(integer) tidak ada
+LINE 1: SELECT COUNT(*) FROM "doctor_schedules" WHERE LOWER(day_of_w...
+                                                      ^
+HINT:  Tidak ada fungsi yang sesuai dengan nama dan tipe argumen yang diberikan.Anda mungkin perlu menambakan cast tipe eksplisit
+)
+
+2026-11-15 02:40:29 [::1][-][-][info][application] $_GET = [
+    'entity' => 'schedules'
+    'q' => 'andi'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '56236'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/schedules?q=andi'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/schedules'
+    'PHP_SELF' => '/index.php/api/v1/master/schedules'
+    'QUERY_STRING' => 'q=andi'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'e512cb25-8083-49fb-88fb-20b8e4fc7068'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794710429.0657
+    'REQUEST_TIME' => 1794710429
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 02:40:35 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42883]: Undefined function: 7 ERROR:  fungsi lower(integer) tidak ada
+LINE 1: SELECT COUNT(*) FROM "doctor_schedules" WHERE LOWER(day_of_w...
+                                                      ^
+HINT:  Tidak ada fungsi yang sesuai dengan nama dan tipe argumen yang diberikan.Anda mungkin perlu menambakan cast tipe eksplisit in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(497): yii\db\Command->queryScalar()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(361): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(84): yii\db\Query->count()
+#7 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('schedules')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42883]: Undefined function: 7 ERROR:  fungsi lower(integer) tidak ada
+LINE 1: SELECT COUNT(*) FROM "doctor_schedules" WHERE LOWER(day_of_w...
+                                                      ^
+HINT:  Tidak ada fungsi yang sesuai dengan nama dan tipe argumen yang diberikan.Anda mungkin perlu menambakan cast tipe eksplisit
+The SQL being executed was: SELECT COUNT(*) FROM "doctor_schedules" WHERE LOWER(day_of_week) LIKE '%1%' in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Schema.php:677
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(497): yii\db\Command->queryScalar()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(361): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(84): yii\db\Query->count()
+#7 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('schedules')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42883
+    [1] => 7
+    [2] => ERROR:  fungsi lower(integer) tidak ada
+LINE 1: SELECT COUNT(*) FROM "doctor_schedules" WHERE LOWER(day_of_w...
+                                                      ^
+HINT:  Tidak ada fungsi yang sesuai dengan nama dan tipe argumen yang diberikan.Anda mungkin perlu menambakan cast tipe eksplisit
+)
+
+2026-11-15 02:40:34 [::1][-][-][info][application] $_GET = [
+    'entity' => 'schedules'
+    'q' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '56239'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/schedules?q=1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/schedules'
+    'PHP_SELF' => '/index.php/api/v1/master/schedules'
+    'QUERY_STRING' => 'q=1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'd32948a5-dde1-4388-9a06-fa965729a981'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794710434.933
+    'REQUEST_TIME' => 1794710434
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 02:45:00 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42883]: Undefined function: 7 ERROR:  operator tidak ada : integer ~~ unknown
+LINE 1: ...COUNT(*) FROM "doctor_schedules" WHERE "day_of_week" LIKE $1
+                                                                ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(497): yii\db\Command->queryScalar()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(361): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(82): yii\db\Query->count()
+#7 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('schedules')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42883]: Undefined function: 7 ERROR:  operator tidak ada : integer ~~ unknown
+LINE 1: ...COUNT(*) FROM "doctor_schedules" WHERE "day_of_week" LIKE $1
+                                                                ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+The SQL being executed was: SELECT COUNT(*) FROM "doctor_schedules" WHERE "day_of_week" LIKE '%1%' in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Schema.php:677
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(497): yii\db\Command->queryScalar()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(361): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(82): yii\db\Query->count()
+#7 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('schedules')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42883
+    [1] => 7
+    [2] => ERROR:  operator tidak ada : integer ~~ unknown
+LINE 1: ...COUNT(*) FROM "doctor_schedules" WHERE "day_of_week" LIKE $1
+                                                                ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+)
+
+2026-11-15 02:45:00 [::1][-][-][info][application] $_GET = [
+    'entity' => 'schedules'
+    'q' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '50154'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/schedules?q=1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/schedules'
+    'PHP_SELF' => '/index.php/api/v1/master/schedules'
+    'QUERY_STRING' => 'q=1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '348ff3ee-189d-4a66-8c57-006db688ff55'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794710700.5796
+    'REQUEST_TIME' => 1794710700
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 02:45:38 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42703]: Undefined column: 7 ERROR:  kolom « day_of_wee » tidak ada
+LINE 1: SELECT COUNT(*) FROM "doctor_schedules" WHERE "day_of_wee"=$...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "doctor_schedules.day_of_week". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(497): yii\db\Command->queryScalar()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(361): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(82): yii\db\Query->count()
+#7 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('schedules')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42703]: Undefined column: 7 ERROR:  kolom « day_of_wee » tidak ada
+LINE 1: SELECT COUNT(*) FROM "doctor_schedules" WHERE "day_of_wee"=$...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "doctor_schedules.day_of_week".
+The SQL being executed was: SELECT COUNT(*) FROM "doctor_schedules" WHERE "day_of_wee"='1' in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Schema.php:677
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(497): yii\db\Command->queryScalar()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(361): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(82): yii\db\Query->count()
+#7 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('schedules')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42703
+    [1] => 7
+    [2] => ERROR:  kolom « day_of_wee » tidak ada
+LINE 1: SELECT COUNT(*) FROM "doctor_schedules" WHERE "day_of_wee"=$...
+                                                      ^
+HINT:  Perhaps you meant to reference the column "doctor_schedules.day_of_week".
+)
+
+2026-11-15 02:45:38 [::1][-][-][info][application] $_GET = [
+    'entity' => 'schedules'
+    'day_of_wee' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '57662'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/schedules?day_of_wee=1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/schedules'
+    'PHP_SELF' => '/index.php/api/v1/master/schedules'
+    'QUERY_STRING' => 'day_of_wee=1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '13e9834b-4265-4a55-bdc2-10d31b64c7b0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794710738.4864
+    'REQUEST_TIME' => 1794710738
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 02:45:49 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42703]: Undefined column: 7 ERROR:  kolom « polyclini_id » tidak ada
+LINE 1: SELECT COUNT(*) FROM "doctors" WHERE "polyclini_id"=$1
+                                             ^
+HINT:  Perhaps you meant to reference the column "doctors.polyclinic_id". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(497): yii\db\Command->queryScalar()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(361): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(82): yii\db\Query->count()
+#7 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('doctors')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42703]: Undefined column: 7 ERROR:  kolom « polyclini_id » tidak ada
+LINE 1: SELECT COUNT(*) FROM "doctors" WHERE "polyclini_id"=$1
+                                             ^
+HINT:  Perhaps you meant to reference the column "doctors.polyclinic_id".
+The SQL being executed was: SELECT COUNT(*) FROM "doctors" WHERE "polyclini_id"='1' in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Schema.php:677
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(497): yii\db\Command->queryScalar()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(361): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(82): yii\db\Query->count()
+#7 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('doctors')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42703
+    [1] => 7
+    [2] => ERROR:  kolom « polyclini_id » tidak ada
+LINE 1: SELECT COUNT(*) FROM "doctors" WHERE "polyclini_id"=$1
+                                             ^
+HINT:  Perhaps you meant to reference the column "doctors.polyclinic_id".
+)
+
+2026-11-15 02:45:49 [::1][-][-][info][application] $_GET = [
+    'entity' => 'doctors'
+    'polyclini_id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '57671'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/doctors?polyclini_id=1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/doctors'
+    'PHP_SELF' => '/index.php/api/v1/master/doctors'
+    'QUERY_STRING' => 'polyclini_id=1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '6a1c3c75-8083-4019-8c6e-3b18198bb668'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794710749.2599
+    'REQUEST_TIME' => 1794710749
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 02:53:46 [::1][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42703]: Undefined column: 7 ERROR:  kolom « doctor » tidak ada
+LINE 1: SELECT COUNT(*) FROM "doctor_schedules" WHERE "doctor"=$1
+                                                      ^
+HINT:  Perhaps you meant to reference the column "doctor_schedules.doctor_id". in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php:1320
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1320): PDOStatement->execute()
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(497): yii\db\Command->queryScalar()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(361): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(84): yii\db\Query->count()
+#7 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('schedules')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[42703]: Undefined column: 7 ERROR:  kolom « doctor » tidak ada
+LINE 1: SELECT COUNT(*) FROM "doctor_schedules" WHERE "doctor"=$1
+                                                      ^
+HINT:  Perhaps you meant to reference the column "doctor_schedules.doctor_id".
+The SQL being executed was: SELECT COUNT(*) FROM "doctor_schedules" WHERE "doctor"='1' in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Schema.php:677
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1325): yii\db\Schema->convertException(Object(PDOException), 'SELECT COUNT(*)...')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(1186): yii\db\Command->internalExecute('SELECT COUNT(*)...')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Command.php(443): yii\db\Command->queryInternal('fetchColumn', 0)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(497): yii\db\Command->queryScalar()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\ActiveQuery.php(361): yii\db\Query->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\db\Query.php(368): yii\db\ActiveQuery->queryScalar('COUNT(*)', Object(yii\db\Connection))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(84): yii\db\Query->count()
+#7 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('schedules')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42703
+    [1] => 7
+    [2] => ERROR:  kolom « doctor » tidak ada
+LINE 1: SELECT COUNT(*) FROM "doctor_schedules" WHERE "doctor"=$1
+                                                      ^
+HINT:  Perhaps you meant to reference the column "doctor_schedules.doctor_id".
+)
+
+2026-11-15 02:53:46 [::1][-][-][info][application] $_GET = [
+    'entity' => 'schedules'
+    'doctor' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '59938'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/schedules?doctor=1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/schedules'
+    'PHP_SELF' => '/index.php/api/v1/master/schedules'
+    'QUERY_STRING' => 'doctor=1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '9de2b608-0fd5-46db-8ad4-dc231a34a163'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794711226.4261
+    'REQUEST_TIME' => 1794711226
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]
+2026-11-15 02:54:57 [::1][-][-][error][yii\web\HttpException:404] yii\web\NotFoundHttpException: Entity tidak ditemukan. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php:48
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\MasterDataController.php(59): api\modules\v1\controllers\MasterDataController->getModelClass('schedule')
+#1 [internal function]: api\modules\v1\controllers\MasterDataController->actionIndex('schedule')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('index', Array)
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/master-data/...', Array)
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#8 {main}
+2026-11-15 02:54:57 [::1][-][-][info][application] $_GET = [
+    'entity' => 'schedule'
+    'doctor_id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '49770'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/master/schedule?doctor_id=1'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/master/schedule'
+    'PHP_SELF' => '/index.php/api/v1/master/schedule'
+    'QUERY_STRING' => 'doctor_id=1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'aada111d-f3d8-4c25-8cf5-7307b048552d'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794711297.6399
+    'REQUEST_TIME' => 1794711297
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+]

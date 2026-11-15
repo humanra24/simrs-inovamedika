@@ -36,6 +36,7 @@ class Patient extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
+            [['medical_record_number'], 'unique'],
             [['medical_record_number', 'nik', 'full_name', 'date_of_birth', 'gender'], 'required'],
             [['date_of_birth'], 'safe'],
             [['address'], 'string'],

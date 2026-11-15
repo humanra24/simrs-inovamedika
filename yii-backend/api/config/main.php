@@ -34,11 +34,14 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                // Rule untuk Auth
                 'POST api/v1/auth/login' => 'v1/auth/login',
 
-                // Rule untuk Pasien
-                ['class' => 'yii\rest\UrlRule', 'controller' => 'v1/patient', 'prefix' => 'api'],
+                // Routing Dinamis untuk Master Data
+                'GET api/v1/master/<entity>' => 'v1/master-data/index',
+                'POST api/v1/master/<entity>' => 'v1/master-data/create',
+                'GET api/v1/master/<entity>/<id:\d+>' => 'v1/master-data/view',
+                'PUT api/v1/master/<entity>/<id:\d+>' => 'v1/master-data/update',
+                'DELETE api/v1/master/<entity>/<id:\d+>' => 'v1/master-data/delete',
             ],
         ],
         'jwt' => [
