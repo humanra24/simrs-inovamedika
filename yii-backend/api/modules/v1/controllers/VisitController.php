@@ -18,10 +18,16 @@ class VisitController extends Controller
 
         $behaviors['authenticator'] = ['class' => JwtAuth::class];
 
-        // Hanya Petugas Pendaftaran & Administrator yang bisa akses
         $behaviors['roleFilter'] = [
             'class' => RoleFilter::class,
-            'roles' => ['Petugas Pendaftaran', 'Administrator'],
+            'roles' => ['Petugas Pendaftaran', 'Dokter', 'Administrator'],
+            'except' => ['history'] // history dikecualikan dari filter ini
+        ];
+
+        $behaviors['historyFilter'] = [
+            'class' => RoleFilter::class,
+            'roles' => ['Dokter', 'Administrator'],
+            'only' => ['history'] // history hanya untuk dokter/admin
         ];
 
         $behaviors['corsFilter'] = ['class' => Cors::class];
@@ -126,16 +132,27 @@ class VisitController extends Controller
 
     /**
      * GET /api/v1/visits/history/<patient_id>
+     * Menampilkan riwayat kunjungan pasien beserta hasil lab-nya
      */
     public function actionHistory($patient_id)
     {
         $visits = Visit::find()
-            ->with(['doctor', 'polyclinic'])
+            ->with([
+                'doctor',
+                'polyclinic',
+                'labOrders',
+                'labOrders.result'
+            ])
             ->where(['patient_id' => $patient_id])
             ->orderBy(['visit_date' => SORT_DESC])
+            ->asArray() // <-- TAMBAHKAN BARIS INI
             ->all();
 
-        return ['status' => 'success', 'total' => count($visits), 'data' => $visits];
+        return [
+            'status' => 'success',
+            'total' => count($visits),
+            'data' => $visits
+        ];
     }
 
     /**

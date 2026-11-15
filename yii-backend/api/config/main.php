@@ -65,6 +65,13 @@ return [
                 'GET api/v1/prescriptions/pending' => 'v1/prescription/pending',
                 'POST api/v1/prescriptions/<id:\d+>/dispense' => 'v1/prescription/dispense',
                 'DELETE api/v1/prescriptions/<id:\d+>' => 'v1/prescription/delete',
+
+                // Lab
+                'POST api/v1/lab/orders/<visit_id:\d+>' => 'v1/lab/create-order',
+                'GET api/v1/lab/orders/pending' => 'v1/lab/pending-orders',
+                'POST api/v1/lab/orders/<lab_order_id:\d+>/cancel' => 'v1/lab/cancel-order',
+                'POST api/v1/lab/results/<lab_order_id:\d+>' => 'v1/lab/submit-result',
+                'GET api/v1/lab/results/<visit_id:\d+>' => 'v1/lab/view-results',
             ],
         ],
         'jwt' => [

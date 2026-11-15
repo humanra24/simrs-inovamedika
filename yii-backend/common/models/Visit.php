@@ -117,6 +117,11 @@ class Visit extends \yii\db\ActiveRecord
         return $this->hasOne(Prescription::class, ['visit_id' => 'id']);
     }
 
+    public function getLabOrders()
+    {
+        return $this->hasMany(LabOrder::class, ['visit_id' => 'id']);
+    }
+
     public static function generateQueueNumber($polyclinic_id, $visit_date)
     {
         $lastVisit = self::find()
