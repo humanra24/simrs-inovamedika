@@ -72,6 +72,12 @@ return [
                 'POST api/v1/lab/orders/<lab_order_id:\d+>/cancel' => 'v1/lab/cancel-order',
                 'POST api/v1/lab/results/<lab_order_id:\d+>' => 'v1/lab/submit-result',
                 'GET api/v1/lab/results/<visit_id:\d+>' => 'v1/lab/view-results',
+
+                // Billing
+                'POST api/v1/bills/generate/<visit_id:\d+>' => 'v1/billing/generate',
+                'GET api/v1/bills/<visit_id:\d+>' => 'v1/billing/view',
+                'POST api/v1/bills/<bill_id:\d+>/pay' => 'v1/billing/pay',
+                'GET api/v1/bills/<visit_id:\d+>/invoice' => 'v1/billing/invoice',
             ],
         ],
         'jwt' => [

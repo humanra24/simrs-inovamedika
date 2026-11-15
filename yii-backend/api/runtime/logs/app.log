@@ -4812,3 +4812,475 @@ $_SERVER = [
     'DB_PASSWORD' => '123'
     'JWT_SECRET' => 'RAHASIAKU_1234567890'
 ]
+2026-11-15 06:55:20 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('generate', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/billing/gene...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 06:55:20 [::1][-][-][info][application] $_GET = [
+    'visit_id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '62499'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/bills/generate/1'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/bills/generate/1'
+    'PHP_SELF' => '/index.php/api/v1/bills/generate/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => 'e4ce263b-9420-44fa-b6a5-150d6b936bec'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'REQUEST_TIME_FLOAT' => 1794725720.5623
+    'REQUEST_TIME' => 1794725720
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 06:56:14 [::1][5][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('generate', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/billing/gene...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 06:56:14 [::1][5][-][info][application] $_GET = [
+    'visit_id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '53936'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/bills/generate/1'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/bills/generate/1'
+    'PHP_SELF' => '/index.php/api/v1/bills/generate/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '231691a7-0c69-41a2-a6e8-2380388247e3'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794725774.1169
+    'REQUEST_TIME' => 1794725774
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 06:56:21 [::1][4][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('generate', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/billing/gene...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 06:56:20 [::1][4][-][info][application] $_GET = [
+    'visit_id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '53942'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/bills/generate/1'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/bills/generate/1'
+    'PHP_SELF' => '/index.php/api/v1/bills/generate/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '9591e5dd-61f1-471d-9130-8d4f972ce069'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794725780.9791
+    'REQUEST_TIME' => 1794725780
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 06:56:45 [::1][2][-][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: Anda tidak memiliki hak akses untuk fitur ini. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\common\components\RoleFilter.php:30
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): common\components\RoleFilter->beforeAction(Object(yii\base\InlineAction))
+#1 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('generate', Array)
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/billing/gene...', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#10 {main}
+2026-11-15 06:56:45 [::1][2][-][info][application] $_GET = [
+    'visit_id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '53954'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/bills/generate/1'
+    'REQUEST_METHOD' => 'POST'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/bills/generate/1'
+    'PHP_SELF' => '/index.php/api/v1/bills/generate/1'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '5c38c567-aee0-4f7c-980b-47beae162671'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_CONTENT_LENGTH' => '0'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794725805.314
+    'REQUEST_TIME' => 1794725805
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 07:11:19 [::1][1][-][error][ParseError] ParseError: syntax error, unexpected token "{" in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\kartik-v\mpdf\mpdf.php:1981
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\composer\ClassLoader.php(427): {closure:Composer\Autoload\ClassLoader::initializeIncludeClosure():575}('D:\\Works\\Inova ...')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\kartik-v\yii2-mpdf\Pdf.php(201): Composer\Autoload\ClassLoader->loadClass('mPDF')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\kartik-v\yii2-mpdf\Pdf.php(191): kartik\mpdf\Pdf->setApi()
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(142): kartik\mpdf\Pdf->getApi()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\kartik-v\yii2-mpdf\Pdf.php(283): yii\base\Component->__get('api')
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\kartik-v\yii2-mpdf\Pdf.php(181): kartik\mpdf\Pdf->output('', '', 'I')
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\BillingController.php(254): kartik\mpdf\Pdf->render('<!DOCTYPE html>...')
+#7 [internal function]: api\modules\v1\controllers\BillingController->actionInvoice('1')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('invoice', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/billing/invo...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+2026-11-15 07:11:18 [::1][1][-][info][application] $_GET = [
+    'visit_id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '54848'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/bills/1/invoice'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/bills/1/invoice'
+    'PHP_SELF' => '/index.php/api/v1/bills/1/invoice'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '877326f1-c3a7-4ceb-ad73-b6fc232c0509'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794726678.5745
+    'REQUEST_TIME' => 1794726678
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 07:11:37 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('invoice', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/billing/invo...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 07:11:37 [::1][-][-][info][application] $_GET = [
+    'visit_id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1443242452.1782749288'
+    '_ga_M8XTLPT6PW' => 'GS2.1.s1782811087$o2$g1$t1782811357$j20$l0$h0'
+    'appearance' => 'light'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '52399'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/bills/1/invoice'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/bills/1/invoice'
+    'PHP_SELF' => '/index.php/api/v1/bills/1/invoice'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not-A.Brand\";v=\"99\", \"Google Chrome\";v=\"157\", \"Chromium\";v=\"157\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,id;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.1443242452.1782749288; _ga_M8XTLPT6PW=GS2.1.s1782811087$o2$g1$t1782811357$j20$l0$h0; appearance=light'
+    'REQUEST_TIME_FLOAT' => 1794726697.1489
+    'REQUEST_TIME' => 1794726697
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 07:11:58 [::1][1][-][error][ParseError] ParseError: syntax error, unexpected token "{" in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\kartik-v\mpdf\mpdf.php:1981
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\composer\ClassLoader.php(427): {closure:Composer\Autoload\ClassLoader::initializeIncludeClosure():575}('D:\\Works\\Inova ...')
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\kartik-v\yii2-mpdf\Pdf.php(201): Composer\Autoload\ClassLoader->loadClass('mPDF')
+#2 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\kartik-v\yii2-mpdf\Pdf.php(191): kartik\mpdf\Pdf->setApi()
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(142): kartik\mpdf\Pdf->getApi()
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\kartik-v\yii2-mpdf\Pdf.php(283): yii\base\Component->__get('api')
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\kartik-v\yii2-mpdf\Pdf.php(181): kartik\mpdf\Pdf->output('', '', 'I')
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\modules\v1\controllers\BillingController.php(254): kartik\mpdf\Pdf->render('<!DOCTYPE html>...')
+#7 [internal function]: api\modules\v1\controllers\BillingController->actionInvoice('1')
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\InlineAction.php(60): call_user_func_array(Array, Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(182): yii\base\InlineAction->runWithParams(Array)
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('invoice', Array)
+#11 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/billing/invo...', Array)
+#12 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#14 {main}
+2026-11-15 07:11:57 [::1][1][-][info][application] $_GET = [
+    'visit_id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '64530'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/bills/1/invoice'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/bills/1/invoice'
+    'PHP_SELF' => '/index.php/api/v1/bills/1/invoice'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_POSTMAN_TOKEN' => '63b36077-3f6a-4559-8820-fc49531dc418'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_USER_AGENT' => 'PostmanRuntime/2.16.2'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_AUTHORIZATION' => '***'
+    'REQUEST_TIME_FLOAT' => 1794726717.7107
+    'REQUEST_TIME' => 1794726717
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
+2026-11-15 07:18:16 [::1][-][-][error][yii\web\HttpException:401] yii\web\UnauthorizedHttpException: Your request was made with invalid credentials. in D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php:97
+Stack trace:
+#0 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(80): yii\filters\auth\AuthMethod->handleFailure(Object(yii\web\Response))
+#1 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\ActionFilter.php(80): yii\filters\auth\AuthMethod->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Component.php(648): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(310): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Controller.php(334): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Controller.php(180): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Module.php(547): yii\base\Controller->runAction('invoice', Array)
+#8 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\web\Application.php(105): yii\base\Module->runAction('v1/billing/invo...', Array)
+#9 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\vendor\yiisoft\yii2\base\Application.php(382): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 D:\Works\Inova Medika Solusindo\simrs-inovamedika\yii-backend\api\web\index.php(19): yii\base\Application->run()
+#11 {main}
+2026-11-15 07:18:16 [::1][-][-][info][application] $_GET = [
+    'visit_id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.1443242452.1782749288'
+    '_ga_M8XTLPT6PW' => 'GS2.1.s1782811087$o2$g1$t1782811357$j20$l0$h0'
+    'appearance' => 'light'
+]
+
+$_SERVER = [
+    'DOCUMENT_ROOT' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web'
+    'REMOTE_ADDR' => '::1'
+    'REMOTE_PORT' => '63760'
+    'SERVER_SOFTWARE' => 'PHP/8.4.27 (Development Server)'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_PORT' => '8080'
+    'REQUEST_URI' => '/api/v1/bills/1/invoice'
+    'REQUEST_METHOD' => 'GET'
+    'SCRIPT_NAME' => '/index.php'
+    'SCRIPT_FILENAME' => 'D:\\Works\\Inova Medika Solusindo\\simrs-inovamedika\\yii-backend\\api\\web\\index.php'
+    'PATH_INFO' => '/api/v1/bills/1/invoice'
+    'PHP_SELF' => '/index.php/api/v1/bills/1/invoice'
+    'HTTP_HOST' => 'localhost:8080'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_SEC_CH_UA' => '\"Not-A.Brand\";v=\"99\", \"Google Chrome\";v=\"157\", \"Chromium\";v=\"157\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Windows\"'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/jxl,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br, zstd'
+    'HTTP_ACCEPT_LANGUAGE' => 'en,id;q=0.9'
+    'HTTP_COOKIE' => '_ga=GA1.1.1443242452.1782749288; _ga_M8XTLPT6PW=GS2.1.s1782811087$o2$g1$t1782811357$j20$l0$h0; appearance=light'
+    'REQUEST_TIME_FLOAT' => 1794727096.6266
+    'REQUEST_TIME' => 1794727096
+    'YII_ENV' => 'dev'
+    'YII_DEBUG' => 'true'
+    'DB_DSN' => 'pgsql:host=127.0.0.1;port=5432;dbname=simrs_db'
+    'DB_USERNAME' => 'postgres'
+    'DB_PASSWORD' => '123'
+    'JWT_SECRET' => 'RAHASIAKU_1234567890'
+]
