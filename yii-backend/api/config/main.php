@@ -84,6 +84,7 @@ return [
                 'GET api/v1/bills/<visit_id:\d+>/invoice' => 'v1/billing/invoice',
 
                 // Reports
+                'GET api/v1/bills' => 'v1/billing/index',
                 'GET api/v1/reports/visits' => 'v1/report/visits',
                 'GET api/v1/reports/bills' => 'v1/report/bills',
                 'GET api/v1/reports/medicines' => 'v1/report/medicines',

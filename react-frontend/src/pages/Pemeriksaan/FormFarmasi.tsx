@@ -7,7 +7,15 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { Pill, Plus, Trash2, CheckCircle2 } from "lucide-react";
+import {
+  Pill,
+  Plus,
+  Trash2,
+  CheckCircle2,
+  XCircle,
+  Clock,
+  Loader2,
+} from "lucide-react";
 import type { Medicine, PrescriptionItem } from "../../types";
 
 interface FormFarmasiProps {
@@ -26,6 +34,10 @@ interface FormFarmasiProps {
   setFrequency: (freq: string) => void;
   handleAddMedicine: (e: React.FormEvent) => void;
   prescriptionStatus?: string;
+  /** ID resep — jika ada, berarti resep sudah tersimpan di DB */
+  prescriptionId?: number | null;
+  onCancelPrescription?: () => void;
+  isCancelling?: boolean;
 }
 
 export default function FormFarmasi({
@@ -44,9 +56,19 @@ export default function FormFarmasi({
   setFrequency,
   handleAddMedicine,
   prescriptionStatus,
+  prescriptionId,
+  onCancelPrescription,
+  isCancelling = false,
 }: FormFarmasiProps) {
+  // Resep sudah tersimpan di DB?
+  const isSaved = !!prescriptionId;
+  // Read-only total: sudah diserahkan atau dibatalkan
   const isReadOnly =
     prescriptionStatus === "dispensed" || prescriptionStatus === "cancelled";
+  // Masih bisa edit draft: belum tersimpan & belum read-only
+  const canEditDraft = !isSaved && !isReadOnly;
+  // Masih bisa batalkan: sudah tersimpan, status pending
+  const canCancel = isSaved && prescriptionStatus === "pending";
 
   return (
     <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden animate-in fade-in duration-300">
@@ -55,7 +77,7 @@ export default function FormFarmasi({
           <Pill className="w-5 h-5 text-purple-600" />
           <h2 className="text-base font-semibold text-slate-900">Resep Obat</h2>
         </div>
-        {!isReadOnly && (
+        {canEditDraft && (
           <Button
             size="sm"
             variant="outline"
@@ -67,12 +89,40 @@ export default function FormFarmasi({
         )}
       </div>
       <div className="p-5">
+        {/* Badge Status */}
+        {prescriptionStatus && (
+          <div className="mb-4 flex items-center gap-2">
+            {prescriptionStatus === "pending" && (
+              <span className="text-xs font-semibold bg-purple-100 text-purple-700 px-2.5 py-1 rounded-md flex items-center gap-1">
+                <Clock className="w-3 h-3" /> Menunggu Diserahkan
+              </span>
+            )}
+            {prescriptionStatus === "dispensed" && (
+              <span className="text-xs font-semibold bg-green-100 text-green-700 px-2.5 py-1 rounded-md flex items-center gap-1">
+                <CheckCircle2 className="w-3 h-3" /> Sudah Diserahkan
+              </span>
+            )}
+            {prescriptionStatus === "cancelled" && (
+              <span className="text-xs font-semibold bg-red-100 text-red-700 px-2.5 py-1 rounded-md flex items-center gap-1">
+                <XCircle className="w-3 h-3" /> Dibatalkan
+              </span>
+            )}
+          </div>
+        )}
+
         {prescriptionStatus === "dispensed" && (
           <div className="mb-4 bg-green-50 border border-green-200 text-green-700 p-3 rounded-lg flex items-center gap-2 text-sm">
             <CheckCircle2 className="w-4 h-4 shrink-0" /> Obat sudah diserahkan
             oleh petugas farmasi.
           </div>
         )}
+
+        {prescriptionStatus === "cancelled" && (
+          <div className="mb-4 bg-red-50 border border-red-200 text-red-700 p-3 rounded-lg flex items-center gap-2 text-sm">
+            <XCircle className="w-4 h-4 shrink-0" /> Resep ini telah dibatalkan.
+          </div>
+        )}
+
         {prescriptionItems.length === 0 ? (
           <p className="text-sm text-slate-400 italic text-center py-6">
             Belum ada obat diresepkan.
@@ -93,7 +143,8 @@ export default function FormFarmasi({
                     {item.dosage} | {item.frequency}
                   </p>
                 </div>
-                {!isReadOnly && (
+                {/* Tombol Trash HANYA muncul saat draft (belum tersimpan) */}
+                {canEditDraft && (
                   <Button
                     type="button"
                     variant="ghost"
@@ -104,6 +155,7 @@ export default function FormFarmasi({
                         prescriptionItems.filter((_, i) => i !== idx),
                       )
                     }
+                    title="Hapus obat dari draft"
                   >
                     <Trash2 className="w-4 h-4" />
                   </Button>
@@ -111,6 +163,30 @@ export default function FormFarmasi({
               </li>
             ))}
           </ul>
+        )}
+
+        {/* Tombol Batalkan Resep — muncul saat sudah tersimpan & pending */}
+        {canCancel && onCancelPrescription && (
+          <div className="mt-5 pt-4 border-t border-slate-100">
+            <Button
+              type="button"
+              variant="outline"
+              className="w-full h-11 text-red-600 border-red-200 hover:bg-red-50 font-semibold"
+              onClick={onCancelPrescription}
+              disabled={isCancelling}
+            >
+              {isCancelling ? (
+                <>
+                  <Loader2 className="w-4 h-4 mr-2 animate-spin" /> Membatalkan
+                  Resep...
+                </>
+              ) : (
+                <>
+                  <XCircle className="w-4 h-4 mr-2" /> Batalkan Resep
+                </>
+              )}
+            </Button>
+          </div>
         )}
       </div>
 

@@ -7,11 +7,26 @@ use yii\rest\Controller;
 use yii\filters\Cors;
 use common\components\JwtAuth;
 use common\components\RoleFilter;
+use common\models\Bill;
 use common\models\Visit;
 use common\models\MedicalRecord;
 
 class MedicalRecordController extends Controller
 {
+    private function isBilled($visit_id): bool
+    {
+        return Bill::find()->where(['visit_id' => $visit_id])->exists();
+    }
+
+    private function billedError()
+    {
+        Yii::$app->response->statusCode = 422;
+        return [
+            'status' => 'error',
+            'message' => 'Tagihan untuk kunjungan ini sudah dibuat, rekam medis tidak dapat diubah lagi.',
+        ];
+    }
+
     public function behaviors()
     {
         $behaviors = parent::behaviors();
@@ -85,6 +100,10 @@ class MedicalRecordController extends Controller
             throw new \yii\web\NotFoundHttpException("Data kunjungan tidak ditemukan.");
         }
 
+        if ($this->isBilled($visit_id)) {
+            return $this->billedError();
+        }
+
         $record = MedicalRecord::findOne(['visit_id' => $visit_id]);
         if ($record) {
             Yii::$app->response->statusCode = 422;
@@ -130,6 +149,10 @@ class MedicalRecordController extends Controller
 
         if (!$model) {
             throw new \yii\web\NotFoundHttpException("Rekam medis tidak ditemukan.");
+        }
+
+        if ($this->isBilled($visit_id)) {
+            return $this->billedError();
         }
 
         // Load data baru dari request

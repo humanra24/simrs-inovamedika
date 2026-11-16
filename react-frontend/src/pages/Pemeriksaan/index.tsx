@@ -12,6 +12,7 @@ import {
   Activity,
   Pill,
   TestTube,
+  CheckCircle2,
 } from "lucide-react";
 import { toast } from "sonner";
 import FormEMR from "./FormEMR";
@@ -27,6 +28,7 @@ import type {
   PrescriptionItem,
   LabOrder,
 } from "../../types";
+import nodeApi from "@/api/nodeApi";
 
 export default function Pemeriksaan() {
   const [activeTab, setActiveTab] = useState<"waiting" | "history">("waiting");
@@ -40,14 +42,17 @@ export default function Pemeriksaan() {
   >("emr");
 
   const [initialActions, setInitialActions] = useState<SelectedAction[]>([]);
+  const [initialLabOrders, setInitialLabOrders] = useState<LabOrder[]>([]);
 
   // Loading States per Tab
   const [isSubmittingEMR, setIsSubmittingEMR] = useState(false);
   const [isSubmittingAction, setIsSubmittingAction] = useState(false);
   const [isSubmittingPrescription, setIsSubmittingPrescription] =
     useState(false);
+  const [isCancellingPrescription, setIsCancellingPrescription] =
+    useState(false); // <-- BARU
   const [isSubmittingLab, setIsSubmittingLab] = useState(false);
-  const [isFetchingTab, setIsFetchingTab] = useState(false); // <-- Loading saat fetch tab
+  const [isFetchingTab, setIsFetchingTab] = useState(false);
 
   // State EMR
   const [emrData, setEmrData] = useState<
@@ -157,7 +162,7 @@ export default function Pemeriksaan() {
               }),
             );
             setSelectedActions(mappedActions);
-            setInitialActions(mappedActions); // <-- Simpan data awal
+            setInitialActions(mappedActions);
           } else {
             setSelectedActions([]);
             setInitialActions([]);
@@ -187,8 +192,40 @@ export default function Pemeriksaan() {
               );
             }
           }
+        } else if (formTab === "lab") {
+          try {
+            const nodeRes = await nodeApi.get(
+              `/lab/orders/visit/${selectedVisit.id}`,
+            );
+
+            if (nodeRes.data.data) {
+              const mappedOrders = nodeRes.data.data.map(
+                (order: {
+                  id: number;
+                  test_name: string;
+                  status: string;
+                  result_data: string | null;
+                  notes: string | null;
+                }) => ({
+                  id: order.id,
+                  test_name: order.test_name,
+                  status: order.status as LabOrder["status"],
+                  result: order.result_data || null,
+                  notes: order.notes || null,
+                }),
+              );
+              setLabOrders(mappedOrders);
+              setInitialLabOrders(mappedOrders);
+            } else {
+              setLabOrders([]);
+              setInitialLabOrders([]);
+            }
+          } catch (err) {
+            console.error("Gagal mengambil order lab dari Node.js", err);
+            setLabOrders([]);
+            setInitialLabOrders([]);
+          }
         }
-        // Lab belum ada endpoint GET by visit_id, jadi kita biarkan kosong dulu (opsional)
       } catch {
         // Abaikan error 404 (belum ada data)
       } finally {
@@ -205,11 +242,13 @@ export default function Pemeriksaan() {
   ) => {
     if (!visit) return toast.error("Data kunjungan tidak ditemukan.");
     setSelectedVisit(visit);
-    setFormTab("emr"); // Kembali ke tab EMR
+    setFormTab("emr");
     setFieldErrors({});
     setSelectedActions([]);
+    setInitialActions([]);
     setPrescriptionItems([]);
     setLabOrders([]);
+    setInitialLabOrders([]);
     setPrescriptionStatus("");
     setPrescriptionId(null);
 
@@ -317,23 +356,19 @@ export default function Pemeriksaan() {
     if (!selectedVisit) return;
     setIsSubmittingAction(true);
     try {
-      // 1. Ambil data tindakan yang sudah ada di DB
       const resAct = await api.get(`/visit-actions/${selectedVisit.id}`);
       const existingActions: { id: number; medical_action_id: number }[] =
         resAct.data.data || [];
 
-      // 2. Buat Set ID untuk pengecekan cepat
       const existingActIds = existingActions.map((a) => a.medical_action_id);
       const selectedActIds = selectedActions.map((a) => a.medical_action_id);
 
-      // 3. HAPUS tindakan yang ada di DB tapi tidak ada di UI
       for (const existing of existingActions) {
         if (!selectedActIds.includes(existing.medical_action_id)) {
           await api.delete(`/visit-actions/${existing.id}`);
         }
       }
 
-      // 4. TAMBAH tindakan yang ada di UI tapi belum ada di DB
       for (const act of selectedActions) {
         if (!existingActIds.includes(act.medical_action_id)) {
           await api.post(`/visit-actions/${selectedVisit.id}`, {
@@ -343,6 +378,7 @@ export default function Pemeriksaan() {
       }
 
       toast.success("Tindakan berhasil disimpan!");
+      setInitialActions(selectedActions);
     } catch (err: unknown) {
       const apiError = err as { response?: { data?: { message?: string } } };
       toast.error(
@@ -385,17 +421,109 @@ export default function Pemeriksaan() {
     }
   };
 
+  /**
+   * Batalkan resep via DELETE /prescriptions/{id}
+   * Setelah berhasil: reset state resep agar bisa input ulang.
+   */
+  const handleCancelPrescription = async () => {
+    if (!prescriptionId) return;
+    if (
+      !window.confirm("Batalkan resep ini? Semua obat pada resep akan dihapus.")
+    )
+      return;
+
+    setIsCancellingPrescription(true);
+    try {
+      await api.delete(`/prescriptions/${prescriptionId}`);
+      toast.success("Resep berhasil dibatalkan.");
+
+      // Reset state lokal — resep dianggap belum ada lagi
+      setPrescriptionId(null);
+      setPrescriptionStatus("");
+      setPrescriptionItems([]);
+    } catch (err: unknown) {
+      const apiError = err as { response?: { data?: { message?: string } } };
+      toast.error(
+        apiError.response?.data?.message || "Gagal membatalkan resep.",
+      );
+    } finally {
+      setIsCancellingPrescription(false);
+    }
+  };
+
+  /**
+   * Simpan order lab:
+   * - Order baru (belum ada id) -> POST
+   * - Order yang dihapus dari UI (ada di initialLabOrders tapi tidak di labOrders,
+   *   dan statusnya masih pending) -> PATCH cancel
+   */
   const handleSaveLab = async () => {
     if (!selectedVisit) return;
     setIsSubmittingLab(true);
     try {
-      for (const lab of labOrders) {
-        await api.post(`/lab/orders/${selectedVisit.id}`, {
-          test_name: lab.test_name,
+      const nodeRes = await nodeApi.get(
+        `/lab/orders/visit/${selectedVisit.id}`,
+      );
+      const existingOrders: {
+        id: number;
+        test_name: string;
+        status: string;
+        result_data: string | null;
+        notes: string | null;
+      }[] = nodeRes.data.data || [];
+
+      const currentIds = labOrders.map((o) => o.id).filter(Boolean) as number[];
+      const currentTestNames = labOrders.map((o) => o.test_name);
+
+      const ordersToCancel = existingOrders.filter(
+        (o) =>
+          o.status !== "cancelled" &&
+          o.status !== "completed" &&
+          !currentIds.includes(o.id) &&
+          !currentTestNames.includes(o.test_name),
+      );
+
+      for (const order of ordersToCancel) {
+        await api.patch(`/lab/orders/${order.id}/cancel`, {
+          status: "cancelled",
         });
       }
+
+      const activeTestNames = existingOrders
+        .filter((o) => o.status !== "cancelled")
+        .map((o) => o.test_name);
+
+      for (const lab of labOrders) {
+        if (!lab.id && !activeTestNames.includes(lab.test_name)) {
+          await api.post(`/lab/orders/${selectedVisit.id}`, {
+            test_name: lab.test_name,
+          });
+        }
+      }
+
       toast.success("Order Lab berhasil disimpan!");
-      setLabOrders([]);
+
+      const refreshedRes = await nodeApi.get(
+        `/lab/orders/visit/${selectedVisit.id}`,
+      );
+      if (refreshedRes.data.data) {
+        const mappedOrders = refreshedRes.data.data.map(
+          (order: {
+            id: number;
+            test_name: string;
+            status: string;
+            result_data: string | null;
+            notes: string | null;
+          }) => ({
+            id: order.id,
+            test_name: order.test_name,
+            status: order.status as LabOrder["status"],
+            result: order.result_data || null,
+          }),
+        );
+        setLabOrders(mappedOrders);
+        setInitialLabOrders(mappedOrders);
+      }
     } catch (err: unknown) {
       const apiError = err as { response?: { data?: { message?: string } } };
       toast.error(
@@ -403,6 +531,41 @@ export default function Pemeriksaan() {
       );
     } finally {
       setIsSubmittingLab(false);
+    }
+  };
+
+  /**
+   * Batalkan order lab secara instan.
+   */
+  const handleCancelLab = async (orderId: number) => {
+    if (!selectedVisit) return;
+    if (!window.confirm("Batalkan order lab ini?")) return;
+
+    try {
+      await api.post(`/lab/orders/${orderId}/cancel`, {
+        status: "cancelled",
+      });
+      toast.success("Order lab dibatalkan.");
+
+      setLabOrders((prev) =>
+        prev.map((o) =>
+          o.id === orderId
+            ? { ...o, status: "cancelled" as LabOrder["status"] }
+            : o,
+        ),
+      );
+      setInitialLabOrders((prev) =>
+        prev.map((o) =>
+          o.id === orderId
+            ? { ...o, status: "cancelled" as LabOrder["status"] }
+            : o,
+        ),
+      );
+    } catch (err: unknown) {
+      const apiError = err as { response?: { data?: { message?: string } } };
+      toast.error(
+        apiError.response?.data?.message || "Gagal membatalkan order lab.",
+      );
     }
   };
 
@@ -432,9 +595,12 @@ export default function Pemeriksaan() {
     setPrescriptionItems([
       ...prescriptionItems,
       {
+        id: 0,
+        prescription_id: prescriptionId ?? 0,
         medicine_id: med.id,
         name: med.name,
         quantity: Number(qty),
+        price: med.price,
         dosage,
         frequency,
       },
@@ -449,17 +615,43 @@ export default function Pemeriksaan() {
   const handleAddLab = (e: React.FormEvent) => {
     e.preventDefault();
     if (!testName) return;
-    setLabOrders([...labOrders, { test_name: testName }]);
+    if (
+      labOrders.some(
+        (o) => o.test_name === testName && o.status !== "cancelled",
+      )
+    ) {
+      return toast.error("Order lab ini sudah ada.");
+    }
+    setLabOrders([
+      ...labOrders,
+      { test_name: testName, status: "pending" as LabOrder["status"] },
+    ]);
     setIsLabModalOpen(false);
     setTestName("");
   };
 
-  // Di dalam render, sebelum return
-  const hasChanges =
+  // ================= DETEKSI PERUBAHAN =================
+  const hasActionChanges =
     selectedActions.length !== initialActions.length ||
     selectedActions.some(
       (act, idx) =>
         act.medical_action_id !== initialActions[idx]?.medical_action_id,
+    );
+
+  const activeLabOrders = labOrders.filter((o) => o.status !== "cancelled");
+  const initialActiveLabOrders = initialLabOrders.filter(
+    (o) => o.status !== "cancelled",
+  );
+  const hasLabChanges =
+    activeLabOrders.length !== initialActiveLabOrders.length ||
+    activeLabOrders.some(
+      (o, idx) => o.test_name !== initialActiveLabOrders[idx]?.test_name,
+    ) ||
+    initialLabOrders.some(
+      (o) =>
+        o.status !== "cancelled" &&
+        o.status !== "completed" &&
+        !labOrders.some((cur) => cur.test_name === o.test_name),
     );
 
   // ================= TAMPILAN FORM (JIKA PASIEN DIPILIH) =================
@@ -566,7 +758,7 @@ export default function Pemeriksaan() {
                 />
                 <Button
                   onClick={handleSaveAction}
-                  disabled={isSubmittingAction || !hasChanges}
+                  disabled={isSubmittingAction || !hasActionChanges}
                   className="w-full h-12 bg-emerald-600 hover:bg-emerald-700 text-white font-bold shadow-md rounded-xl"
                 >
                   {isSubmittingAction ? (
@@ -599,27 +791,38 @@ export default function Pemeriksaan() {
                   setFrequency={setFrequency}
                   handleAddMedicine={handleAddMedicine}
                   prescriptionStatus={prescriptionStatus}
+                  prescriptionId={prescriptionId}
+                  onCancelPrescription={handleCancelPrescription}
+                  isCancelling={isCancellingPrescription}
                 />
-                {prescriptionStatus !== "dispensed" &&
-                  prescriptionStatus !== "cancelled" && (
-                    <Button
-                      onClick={handleSavePrescription}
-                      disabled={
-                        isSubmittingPrescription ||
-                        (prescriptionItems.length === 0 && !prescriptionId)
-                      }
-                      className="w-full h-12 bg-purple-600 hover:bg-purple-700 text-white font-bold shadow-md rounded-xl"
-                    >
-                      {isSubmittingPrescription ? (
-                        <>
-                          <Loader2 className="w-5 h-5 mr-2 animate-spin" />{" "}
-                          Menyimpan Resep...
-                        </>
-                      ) : (
-                        "Simpan Resep"
-                      )}
-                    </Button>
+
+                <Button
+                  onClick={handleSavePrescription}
+                  disabled={
+                    isSubmittingPrescription ||
+                    isCancellingPrescription ||
+                    !!prescriptionId ||
+                    prescriptionItems.length === 0
+                  }
+                  className="w-full h-12 bg-purple-600 hover:bg-purple-700 text-white font-bold shadow-md rounded-xl"
+                >
+                  {isSubmittingPrescription ? (
+                    <>
+                      <Loader2 className="w-5 h-5 mr-2 animate-spin" />
+                      Mengirim Order Resep...
+                    </>
+                  ) : prescriptionId ? (
+                    <>
+                      <CheckCircle2 className="w-5 h-5 mr-2" />
+                      Resep Sudah Dikirim
+                    </>
+                  ) : (
+                    <>
+                      <Pill className="w-5 h-5 mr-2" />
+                      Kirim Order Resep
+                    </>
                   )}
+                </Button>
               </div>
             )}
 
@@ -633,10 +836,11 @@ export default function Pemeriksaan() {
                   testName={testName}
                   setTestName={setTestName}
                   handleAddLab={handleAddLab}
+                  onCancelOrder={handleCancelLab}
                 />
                 <Button
                   onClick={handleSaveLab}
-                  disabled={isSubmittingLab || labOrders.length === 0}
+                  disabled={isSubmittingLab || !hasLabChanges}
                   className="w-full h-12 bg-orange-600 hover:bg-orange-700 text-white font-bold shadow-md rounded-xl"
                 >
                   {isSubmittingLab ? (
@@ -645,7 +849,7 @@ export default function Pemeriksaan() {
                       Menyimpan Lab...
                     </>
                   ) : (
-                    "Simpan Order Lab"
+                    "Kirim Order Lab"
                   )}
                 </Button>
               </div>

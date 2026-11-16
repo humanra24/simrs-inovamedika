@@ -3,12 +3,15 @@ import { AuthProvider } from "./context/AuthContext";
 import { AuthContext } from "./context/AuthContextDef";
 import { useContext } from "react";
 import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
 import Pendaftaran from "./pages/Pendaftaran";
 import MainLayout from "./layouts/MainLayout";
 import { Toaster } from "sonner";
 import Pemeriksaan from "./pages/Pemeriksaan";
 import MasterData from "./pages/MasterData";
+import Farmasi from "./pages/Farmasi";
+import Lab from "./pages/Lab";
+import Billing from "./pages/Billing";
+import Dashboard from "./pages/Dashboard";
 
 const ProtectedRoute = ({ children }: { children: React.ReactNode }) => {
   const { user, loading } = useContext(AuthContext);
@@ -37,6 +40,9 @@ export default function App() {
             <Route path="master-data" element={<MasterData />} />
             <Route path="pendaftaran" element={<Pendaftaran />} />
             <Route path="pemeriksaan" element={<Pemeriksaan />} />
+            <Route path="farmasi" element={<Farmasi />} />
+            <Route path="/lab" element={<Lab />} />
+            <Route path="/bill" element={<Billing />} />
           </Route>
         </Routes>
       </BrowserRouter>

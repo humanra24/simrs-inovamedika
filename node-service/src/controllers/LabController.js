@@ -1,11 +1,40 @@
 const LabService = require("../services/LabService");
 
 class LabController {
-  static async getPending(req, res) {
+  static async getOrders(req, res) {
     try {
-      const data = await LabService.getPendingOrders();
+      const status = req.query.status || null; // Ambil query ?status=
+      const data = await LabService.getOrders(status);
+      res.json({ status: "success", total: data.length, data });
+    } catch (err) {
+      console.error("Error getOrders:", err);
+      res.status(500).json({ status: "error", message: err.message });
+    }
+  }
+
+  static async getOrderById(req, res) {
+    try {
+      const { id } = req.params;
+      const data = await LabService.getOrderById(id);
+      if (!data) {
+        return res
+          .status(404)
+          .json({ status: "error", message: "Order lab tidak ditemukan." });
+      }
       res.json({ status: "success", data });
     } catch (err) {
+      console.error(err);
+      res.status(500).json({ status: "error", message: err.message });
+    }
+  }
+
+  static async getOrdersByVisit(req, res) {
+    try {
+      const { visitId } = req.params;
+      const data = await LabService.getOrdersByVisitId(visitId);
+      res.json({ status: "success", total: data.length, data });
+    } catch (err) {
+      console.error("Error getOrdersByVisit:", err);
       res.status(500).json({ status: "error", message: err.message });
     }
   }

@@ -9,6 +9,9 @@ import {
   Activity,
   LogOut,
   Database,
+  Pill,
+  TestTube,
+  DollarSign,
 } from "lucide-react";
 
 export default function MainLayout() {
@@ -53,7 +56,24 @@ export default function MainLayout() {
       icon: Stethoscope,
       roles: ["Dokter", "Administrator"],
     },
-    // Menu lain menyusul
+    {
+      path: "/farmasi",
+      label: "Farmasi",
+      icon: Pill,
+      roles: ["admin", "farmasi"],
+    },
+    {
+      path: "/lab",
+      label: "Laboratorium",
+      icon: TestTube,
+      roles: ["admin", "lab"],
+    },
+    {
+      path: "/bill",
+      label: "Kasir",
+      icon: DollarSign,
+      roles: ["admin", "lab"],
+    },
   ];
 
   return (

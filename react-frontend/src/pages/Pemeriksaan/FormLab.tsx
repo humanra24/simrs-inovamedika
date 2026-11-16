@@ -7,7 +7,15 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { TestTube, Plus, Trash2 } from "lucide-react";
+import {
+  TestTube,
+  Plus,
+  Trash2,
+  CheckCircle2,
+  Clock,
+  XCircle,
+  FileText,
+} from "lucide-react";
 import type { LabOrder } from "../../types";
 
 interface FormLabProps {
@@ -18,6 +26,7 @@ interface FormLabProps {
   testName: string;
   setTestName: (name: string) => void;
   handleAddLab: (e: React.FormEvent) => void;
+  onCancelOrder?: (orderId: number) => void;
 }
 
 export default function FormLab({
@@ -28,6 +37,7 @@ export default function FormLab({
   testName,
   setTestName,
   handleAddLab,
+  onCancelOrder,
 }: FormLabProps) {
   return (
     <div className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden animate-in fade-in duration-300">
@@ -54,25 +64,122 @@ export default function FormLab({
           </p>
         ) : (
           <ul className="space-y-3">
-            {labOrders.map((item, idx) => (
-              <li
-                key={idx}
-                className="flex justify-between items-center bg-slate-50 p-4 rounded-lg border border-slate-100"
-              >
-                <p className="font-semibold text-slate-900">{item.test_name}</p>
-                <Button
-                  type="button"
-                  variant="ghost"
-                  size="icon"
-                  className="h-8 w-8 text-red-500 hover:bg-red-50"
-                  onClick={() =>
-                    setLabOrders(labOrders.filter((_, i) => i !== idx))
-                  }
+            {labOrders.map((item, idx) => {
+              const itemKey = item.id ? `saved-${item.id}` : `draft-${idx}`;
+              const isCompleted = item.status === "completed";
+
+              return (
+                <li
+                  key={itemKey}
+                  className={`p-4 rounded-lg border ${
+                    isCompleted
+                      ? "bg-green-50/40 border-green-200"
+                      : "bg-slate-50 border-slate-100"
+                  }`}
                 >
-                  <Trash2 className="w-4 h-4" />
-                </Button>
-              </li>
-            ))}
+                  <div className="flex justify-between items-start gap-3">
+                    <div className="flex-1 min-w-0">
+                      {/* Nama Pemeriksaan */}
+                      <p className="font-semibold text-slate-900">
+                        {item.test_name}
+                      </p>
+
+                      {/* Status Badge */}
+                      <div className="flex items-center gap-2 mt-2">
+                        {(!item.status || item.status === "pending") && (
+                          <span className="text-xs font-semibold bg-orange-100 text-orange-700 px-2 py-1 rounded-md flex items-center gap-1">
+                            <Clock className="w-3 h-3" /> Menunggu Hasil
+                          </span>
+                        )}
+                        {isCompleted && (
+                          <span className="text-xs font-semibold bg-green-100 text-green-700 px-2 py-1 rounded-md flex items-center gap-1">
+                            <CheckCircle2 className="w-3 h-3" /> Selesai
+                          </span>
+                        )}
+                        {item.status === "cancelled" && (
+                          <span className="text-xs font-semibold bg-red-100 text-red-700 px-2 py-1 rounded-md flex items-center gap-1">
+                            <XCircle className="w-3 h-3" /> Dibatalkan
+                          </span>
+                        )}
+                      </div>
+
+                      {/* HASIL LAB — tampil jika completed & result ada */}
+                      {isCompleted && item.result && (
+                        <div className="mt-3 bg-white p-3 rounded-lg border border-green-200">
+                          <div className="flex items-center gap-1.5 mb-1.5">
+                            <FileText className="w-3.5 h-3.5 text-green-600" />
+                            <p className="text-xs font-bold text-green-700 uppercase tracking-wide">
+                              Hasil Pemeriksaan
+                            </p>
+                          </div>
+                          <p className="text-sm text-slate-800 whitespace-pre-wrap">
+                            {item.result}
+                          </p>
+                          {item.notes && (
+                            <div className="mt-2 pt-2 border-t border-slate-100">
+                              <p className="text-xs text-slate-500">
+                                <span className="font-semibold">Catatan:</span>{" "}
+                                {item.notes}
+                              </p>
+                            </div>
+                          )}
+                        </div>
+                      )}
+
+                      {/* HASIL ADA TAPI STATUS BUKAN COMPLETED (fallback) */}
+                      {!isCompleted && item.result && (
+                        <div className="mt-3 bg-white p-3 rounded-lg border border-slate-200">
+                          <div className="flex items-center gap-1.5 mb-1.5">
+                            <FileText className="w-3.5 h-3.5 text-slate-500" />
+                            <p className="text-xs font-semibold text-slate-500 uppercase">
+                              Hasil
+                            </p>
+                          </div>
+                          <p className="text-sm text-slate-800 whitespace-pre-wrap">
+                            {item.result}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+
+                    {/* TOMBOL AKSI */}
+                    {!item.id && (
+                      <Button
+                        type="button"
+                        variant="ghost"
+                        size="icon"
+                        className="h-8 w-8 text-red-500 hover:bg-red-50 shrink-0"
+                        onClick={() =>
+                          setLabOrders(labOrders.filter((_, i) => i !== idx))
+                        }
+                      >
+                        <Trash2 className="w-4 h-4" />
+                      </Button>
+                    )}
+
+                    {item.id && item.status === "pending" && (
+                      <Button
+                        type="button"
+                        variant="outline"
+                        size="sm"
+                        className="h-8 text-red-600 border-red-200 hover:bg-red-50 shrink-0"
+                        onClick={() => {
+                          if (onCancelOrder) {
+                            onCancelOrder(item.id!);
+                          } else {
+                            setLabOrders(
+                              labOrders.filter((o) => o.id !== item.id),
+                            );
+                          }
+                        }}
+                      >
+                        <XCircle className="w-4 h-4 mr-1" /> Batal
+                      </Button>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
           </ul>
         )}
       </div>

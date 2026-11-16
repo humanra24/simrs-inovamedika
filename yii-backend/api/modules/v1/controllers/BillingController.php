@@ -10,7 +10,9 @@ use common\components\RoleFilter;
 use common\models\Visit;
 use common\models\Bill;
 use common\models\BillItem;
+use common\models\MedicalRecord;
 use common\models\Payment;
+use common\models\Prescription;
 
 class BillingController extends Controller
 {
@@ -41,6 +43,35 @@ class BillingController extends Controller
         $visit = Visit::findOne($visit_id);
         if (!$visit) {
             throw new \yii\web\NotFoundHttpException("Data kunjungan tidak ditemukan.");
+        }
+
+        if (!MedicalRecord::find()->where(['visit_id' => $visit_id])->exists()) {
+            Yii::$app->response->statusCode = 422;
+            return [
+                'status' => 'error',
+                'message' => 'Rekam medis belum diisi. Lengkapi pemeriksaan dokter sebelum membuat tagihan.',
+            ];
+        }
+
+        $pendingLab = $visit->getLabOrders()->where(['status' => 'pending'])->exists();
+        if ($pendingLab) {
+            Yii::$app->response->statusCode = 422;
+            return [
+                'status' => 'error',
+                'message' => 'Masih ada permintaan lab yang belum selesai. Selesaikan atau batalkan dulu sebelum membuat tagihan.',
+            ];
+        }
+
+        $pendingPrescription = Prescription::find()
+            ->where(['visit_id' => $visit_id, 'status' => 'pending'])
+            ->exists();
+
+        if ($pendingPrescription) {
+            Yii::$app->response->statusCode = 422;
+            return [
+                'status' => 'error',
+                'message' => 'Resep belum diserahkan oleh farmasi. Proses atau batalkan resep sebelum membuat tagihan.',
+            ];
         }
 
         // Cek jika tagihan sudah ada
@@ -125,6 +156,22 @@ class BillingController extends Controller
         }
     }
 
+    public function actionIndex()
+    {
+        $bills = Bill::find()
+            ->with(['visit.patient', 'visit.polyclinic'])
+            ->orderBy(['id' => SORT_DESC])
+            ->asArray()
+            ->all();
+
+        // Tambahkan perhitungan sisa tagihan
+        foreach ($bills as &$bill) {
+            $bill['remaining_amount'] = $bill['total_amount'] - $bill['paid_amount'];
+        }
+
+        return ['status' => 'success', 'data' => $bills];
+    }
+
     /**
      * GET /api/v1/bills/<visit_id>
      * Menampilkan detail tagihan
@@ -138,6 +185,8 @@ class BillingController extends Controller
             ->one();
 
         if ($bill) {
+            // Tambahkan perhitungan sisa tagihan
+            $bill['remaining_amount'] = $bill['total_amount'] - $bill['paid_amount'];
             return ['status' => 'success', 'data' => $bill];
         }
         throw new \yii\web\NotFoundHttpException("Tagihan tidak ditemukan.");
@@ -207,6 +256,14 @@ class BillingController extends Controller
 
             $bill->save(false);
 
+            if ($bill->status === 'paid') {
+                $visit = Visit::findOne($bill->visit_id);
+                if ($visit && $visit->status !== 'completed') {
+                    $visit->status = 'completed';
+                    $visit->save(false);
+                }
+            }
+
             $transaction->commit();
 
             return [
@@ -260,6 +317,9 @@ class BillingController extends Controller
         ]);
 
         $mpdf->WriteHTML($content);
+
+        // TAMBAHKAN BARIS INI UNTUK CORS
+        header('Access-Control-Allow-Origin: *');
 
         // Output langsung ke browser (inline)
         $mpdf->Output('Invoice-' . $bill->id . '.pdf', \Mpdf\Output\Destination::INLINE);

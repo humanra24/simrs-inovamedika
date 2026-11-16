@@ -7,6 +7,7 @@ use yii\rest\Controller;
 use yii\filters\Cors;
 use common\components\JwtAuth;
 use common\components\RoleFilter;
+use common\models\Bill;
 use common\models\Visit;
 use common\models\Medicine;
 use common\models\Prescription;
@@ -14,6 +15,20 @@ use common\models\PrescriptionItem;
 
 class PrescriptionController extends Controller
 {
+    private function isBilled($visit_id): bool
+    {
+        return Bill::find()->where(['visit_id' => $visit_id])->exists();
+    }
+
+    private function billedError()
+    {
+        Yii::$app->response->statusCode = 422;
+        return [
+            'status' => 'error',
+            'message' => 'Tagihan untuk kunjungan ini sudah dibuat, resep tidak dapat diubah lagi.',
+        ];
+    }
+
     public function behaviors()
     {
         $behaviors = parent::behaviors();
@@ -40,6 +55,10 @@ class PrescriptionController extends Controller
         $visit = Visit::findOne($visit_id);
         if (!$visit) {
             throw new \yii\web\NotFoundHttpException("Data kunjungan tidak ditemukan.");
+        }
+
+        if ($this->isBilled($visit_id)) {
+            return $this->billedError();
         }
 
         // Cek apakah sudah ada resep
@@ -112,6 +131,7 @@ class PrescriptionController extends Controller
             ->with(['visit.patient', 'items.medicine'])
             ->where(['status' => 'pending'])
             ->orderBy(['created_at' => SORT_ASC])
+            ->asArray()
             ->all();
 
         return ['status' => 'success', 'total' => count($prescriptions), 'data' => $prescriptions];
@@ -197,6 +217,10 @@ class PrescriptionController extends Controller
 
         if (!$prescription) {
             throw new \yii\web\NotFoundHttpException("Resep tidak ditemukan.");
+        }
+
+        if ($this->isBilled($prescription->visit_id)) {
+            return $this->billedError();
         }
 
         // Pencegahan: Jangan hapus resep yang sudah diproses

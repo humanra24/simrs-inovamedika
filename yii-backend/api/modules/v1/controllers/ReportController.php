@@ -10,7 +10,6 @@ use common\components\RoleFilter;
 use common\models\Visit;
 use common\models\Bill;
 use common\models\PrescriptionItem;
-use yii\data\ActiveDataProvider;
 
 class ReportController extends Controller
 {
@@ -30,36 +29,51 @@ class ReportController extends Controller
         return $behaviors;
     }
 
+    private function getPeriod(): array
+    {
+        return [
+            Yii::$app->request->get('start_date', date('Y-m-01')),
+            Yii::$app->request->get('end_date', date('Y-m-d')),
+        ];
+    }
+
     /**
      * GET /api/v1/reports/visits
-     * Laporan rincian kunjungan berdasarkan periode
+     * Semua kunjungan pada periode (tanpa paginasi), sudah diratakan untuk Excel
      */
     public function actionVisits()
     {
-        $startDate = Yii::$app->request->get('start_date', date('Y-m-01'));
-        $endDate = Yii::$app->request->get('end_date', date('Y-m-d'));
+        [$startDate, $endDate] = $this->getPeriod();
 
-        $query = Visit::find()
+        $visits = Visit::find()
             ->with(['patient', 'doctor', 'polyclinic'])
-            ->where(['between', 'visit_date', $startDate, $endDate])
-            ->orderBy(['visit_date' => SORT_DESC]);
+            ->where(['between', 'DATE(visits.visit_date)', $startDate, $endDate])
+            ->orderBy(['visits.visit_date' => SORT_DESC])
+            ->all();
 
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-            'pagination' => ['pageSize' => 50],
-        ]);
+        $data = [];
+        foreach ($visits as $i => $v) {
+            $data[] = [
+                'No'         => $i + 1,
+                'Tanggal'    => $v->visit_date,
+                'No Antrean' => $v->queue_number ?? '-',
+                'Pasien'     => $v->patient->full_name ?? '-',
+                'Poliklinik' => $v->polyclinic->name ?? '-',
+                'Dokter'     => $v->doctor->name ?? '-',
+                'Status'     => $v->status ?? '-',
+            ];
+        }
 
-        return $dataProvider;
+        return ['status' => 'success', 'data' => $data];
     }
 
     /**
      * GET /api/v1/reports/bills
-     * Laporan rincian tagihan berdasarkan periode
+     * Semua tagihan pada periode (tanpa paginasi), sudah diratakan untuk Excel
      */
     public function actionBills()
     {
-        $startDate = Yii::$app->request->get('start_date', date('Y-m-01'));
-        $endDate = Yii::$app->request->get('end_date', date('Y-m-d'));
+        [$startDate, $endDate] = $this->getPeriod();
         $status = Yii::$app->request->get('status');
 
         $query = Bill::find()
@@ -70,33 +84,52 @@ class ReportController extends Controller
             $query->andWhere(['bills.status' => $status]);
         }
 
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query->orderBy(['bills.created_at' => SORT_DESC]),
-            'pagination' => ['pageSize' => 50],
-        ]);
+        $bills = $query->orderBy(['bills.created_at' => SORT_DESC])->all();
 
-        return $dataProvider;
+        $data = [];
+        foreach ($bills as $i => $b) {
+            $data[] = [
+                'No'            => $i + 1,
+                'Tanggal'       => $b->created_at,
+                'Pasien'        => $b->visit->patient->full_name ?? '-',
+                'Total Tagihan' => (float) $b->total_amount,
+                'Status'        => strtoupper((string) $b->status),
+            ];
+        }
+
+        return ['status' => 'success', 'data' => $data];
     }
 
     /**
      * GET /api/v1/reports/medicines
-     * Laporan rincian penggunaan obat berdasarkan periode
+     * Rekap penggunaan obat (resep berstatus dispensed) pada periode
      */
     public function actionMedicines()
     {
-        $startDate = Yii::$app->request->get('start_date', date('Y-m-01'));
-        $endDate = Yii::$app->request->get('end_date', date('Y-m-d'));
+        [$startDate, $endDate] = $this->getPeriod();
 
-        // Query agregasi obat (bisa langsung di Yii2 untuk rincian)
-        $query = PrescriptionItem::find()
-            ->select(['medicines.name as medicine_name', 'SUM(prescription_items.quantity) as total_used'])
-            ->joinWith(['prescription.visit', 'medicine'])
-            ->where(['between', 'visits.visit_date', $startDate, $endDate])
+        $rows = PrescriptionItem::find()
+            ->select([
+                'medicines.name AS medicine_name',
+                'SUM(prescription_items.quantity) AS total_used',
+            ])
+            ->joinWith(['prescription.visit', 'medicine'], false)
+            ->where(['between', 'DATE(visits.visit_date)', $startDate, $endDate])
             ->andWhere(['prescriptions.status' => 'dispensed'])
-            ->groupBy('medicines.id', 'medicines.name')
+            ->groupBy(['medicines.id', 'medicines.name'])
             ->orderBy(['total_used' => SORT_DESC])
-            ->asArray();
+            ->asArray()
+            ->all();
 
-        return ['status' => 'success', 'data' => $query->all()];
+        $data = [];
+        foreach ($rows as $i => $r) {
+            $data[] = [
+                'No'              => $i + 1,
+                'Nama Obat'       => $r['medicine_name'],
+                'Jumlah Digunakan' => (int) $r['total_used'],
+            ];
+        }
+
+        return ['status' => 'success', 'data' => $data];
     }
 }
