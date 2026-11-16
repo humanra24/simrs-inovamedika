@@ -20,14 +20,7 @@ class VisitController extends Controller
 
         $behaviors['roleFilter'] = [
             'class' => RoleFilter::class,
-            'roles' => ['Petugas Pendaftaran', 'Dokter', 'Administrator'],
-            'except' => ['history'] // history dikecualikan dari filter ini
-        ];
-
-        $behaviors['historyFilter'] = [
-            'class' => RoleFilter::class,
-            'roles' => ['Dokter', 'Administrator'],
-            'only' => ['history'] // history hanya untuk dokter/admin
+            'roles' => ['Petugas Pendaftaran', 'Dokter', 'Administrator', 'Kasir']
         ];
 
         $behaviors['corsFilter'] = ['class' => Cors::class];

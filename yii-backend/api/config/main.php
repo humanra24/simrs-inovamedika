@@ -64,7 +64,6 @@ return [
 
                 // Farmasi / Resep
                 'GET api/v1/prescriptions/<visit_id:\d+>' => 'v1/prescription/view',
-                'GET api/v1/prescriptions/<visit_id:\d+>' => 'v1/prescription/view',
                 'POST api/v1/prescriptions/<visit_id:\d+>' => 'v1/prescription/create',
                 'GET api/v1/prescriptions/pending' => 'v1/prescription/pending',
                 'POST api/v1/prescriptions/<id:\d+>/dispense' => 'v1/prescription/dispense',

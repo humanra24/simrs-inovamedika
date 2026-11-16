@@ -37,7 +37,7 @@ class MasterDataController extends Controller
         // Hanya Administrator yang bisa akses Master Data
         $behaviors['roleFilter'] = [
             'class' => RoleFilter::class,
-            'roles' => ['Administrator'],
+            'roles' => ['Administrator', 'Petugas Pendaftaran', 'Dokter'],
         ];
 
         $behaviors['corsFilter'] = ['class' => Cors::class];

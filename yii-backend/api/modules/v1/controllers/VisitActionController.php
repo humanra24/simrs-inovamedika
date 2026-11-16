@@ -55,10 +55,6 @@ class VisitActionController extends Controller
             throw new \yii\web\NotFoundHttpException("Data kunjungan tidak ditemukan.");
         }
 
-        if ($this->isBilled($visit_id)) {
-            return $this->billedError();
-        }
-
         $actions = VisitAction::find()
             ->with(['medicalAction'])
             ->where(['visit_id' => $visit_id])
@@ -82,6 +78,10 @@ class VisitActionController extends Controller
         $visit = Visit::findOne($visit_id);
         if (!$visit) {
             throw new \yii\web\NotFoundHttpException("Data kunjungan tidak ditemukan.");
+        }
+
+        if ($this->isBilled($visit_id)) {
+            return $this->billedError();
         }
 
         $medical_action_id = Yii::$app->request->post('medical_action_id');
