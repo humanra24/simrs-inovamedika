@@ -68,7 +68,7 @@ export default function DetailOrder({
       open={true}
       onOpenChange={(open) => !open && !isSubmitting && onClose()}
     >
-      <DialogContent className="sm:max-w-[600px] bg-white shadow-2xl border-slate-200 max-h-[90vh] overflow-y-auto">
+      <DialogContent className="sm:max-w-150 bg-white shadow-2xl border-slate-200 max-h-[90vh] overflow-y-auto">
         <DialogHeader className="border-b pb-4 mb-2">
           <DialogTitle className="text-xl font-bold text-slate-900 flex items-center gap-2">
             <TestTube className="w-5 h-5 text-orange-600" />

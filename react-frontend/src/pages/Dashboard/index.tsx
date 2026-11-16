@@ -245,7 +245,7 @@ export default function Dashboard() {
       </div>
 
       {/* Tab Navigasi */}
-      <div className="flex bg-slate-100 p-1 rounded-xl w-full sm:w-[400px]">
+      <div className="flex bg-slate-100 p-1 rounded-xl w-full sm:w-100">
         <button
           onClick={() => setActiveTab("ringkasan")}
           className={`flex-1 py-2 text-sm font-semibold rounded-lg transition-all flex items-center justify-center gap-2 ${activeTab === "ringkasan" ? "bg-white text-indigo-700 shadow-sm" : "text-slate-500 hover:bg-slate-200"}`}
@@ -374,7 +374,7 @@ export default function Dashboard() {
                   <h3 className="font-bold text-slate-800 mb-4">
                     Kunjungan per Poliklinik
                   </h3>
-                  <div className="h-[300px] w-full">
+                  <div className="h-75 w-full">
                     <ResponsiveContainer width="100%" height="100%">
                       <PieChart>
                         <Pie
@@ -423,7 +423,7 @@ export default function Dashboard() {
                   <h3 className="font-bold text-slate-800 mb-4">
                     Tindakan Medis Terbanyak
                   </h3>
-                  <div className="h-[300px] w-full">
+                  <div className="h-75 w-full">
                     <ResponsiveContainer width="100%" height="100%">
                       <BarChart
                         data={actions.map((a) => ({
@@ -544,7 +544,7 @@ export default function Dashboard() {
       {/* MODAL DRILL DOWN (DETAIL) */}
       {drillDownType && (
         <Dialog open={true} onOpenChange={() => setDrillDownType(null)}>
-          <DialogContent className="sm:max-w-[700px] bg-white shadow-2xl border-slate-200 max-h-[90vh] overflow-y-auto">
+          <DialogContent className="sm:max-w-175 bg-white shadow-2xl border-slate-200 max-h-[90vh] overflow-y-auto">
             <DialogHeader className="border-b pb-4 mb-4">
               <DialogTitle className="text-xl font-bold text-slate-900">
                 {drillDownTitle}

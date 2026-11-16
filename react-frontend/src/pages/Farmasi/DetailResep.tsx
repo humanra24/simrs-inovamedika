@@ -68,7 +68,7 @@ export default function DetailResep({
         if (!open && !isBusy) onClose();
       }}
     >
-      <DialogContent className="w-[calc(100%-2rem)] sm:max-w-[700px] bg-white shadow-2xl border-slate-200 max-h-[90vh] overflow-y-auto p-5 sm:p-6">
+      <DialogContent className="w-[calc(100%-2rem)] sm:max-w-175 bg-white shadow-2xl border-slate-200 max-h-[90vh] overflow-y-auto p-5 sm:p-6">
         {/* Header */}
         <DialogHeader className="border-b border-slate-200 pb-4">
           <DialogTitle className="text-xl font-bold text-slate-900 flex items-center gap-2">

@@ -209,7 +209,7 @@ export default function RiwayatPendaftaran() {
                   >
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
-                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-100 to-indigo-100 text-xs font-bold text-blue-700">
+                        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-blue-100 to-indigo-100 text-xs font-bold text-blue-700">
                           {getInitials(h.patient?.full_name)}
                         </div>
                         <div>
@@ -256,7 +256,7 @@ export default function RiwayatPendaftaran() {
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-100 to-indigo-100 text-xs font-bold text-blue-700">
+                    <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-linear-to-br from-blue-100 to-indigo-100 text-xs font-bold text-blue-700">
                       {getInitials(h.patient?.full_name)}
                     </div>
                     <div>

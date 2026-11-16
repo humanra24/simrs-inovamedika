@@ -163,7 +163,7 @@ export default function DetailBill({
   if (loading) {
     return (
       <Dialog open={true} onOpenChange={() => onClose()}>
-        <DialogContent className="sm:max-w-[500px] flex justify-center p-12">
+        <DialogContent className="sm:max-w-125 flex justify-center p-12">
           <Loader2 className="w-8 h-8 animate-spin text-blue-600" />
         </DialogContent>
       </Dialog>
@@ -181,7 +181,7 @@ export default function DetailBill({
         open={true}
         onOpenChange={(open) => !open && !isPaying && onClose()}
       >
-        <DialogContent className="sm:max-w-[650px] bg-white shadow-2xl border-slate-200 max-h-[90vh] overflow-y-auto">
+        <DialogContent className="sm:max-w-162.5 bg-white shadow-2xl border-slate-200 max-h-[90vh] overflow-y-auto">
           <DialogHeader className="border-b pb-4 mb-4">
             <DialogTitle className="text-xl font-bold text-slate-900 flex items-center gap-2">
               <Receipt className="w-5 h-5 text-blue-600" /> Detail Tagihan
@@ -369,7 +369,7 @@ export default function DetailBill({
       {/* MODAL POPUP PREVIEW PDF */}
       {showPreview && (
         <Dialog open={true} onOpenChange={() => setShowPreview(false)}>
-          <DialogContent className="sm:max-w-[800px] h-[85vh] p-0 flex flex-col bg-slate-100 border-none [&>button]:hidden">
+          <DialogContent className="m:max-w-200 h-[85vh] p-0 flex flex-col bg-slate-100 border-none [&>button]:hidden">
             <DialogHeader className="px-4 py-3 bg-white border-b flex flex-row items-center justify-between rounded-t-lg">
               <DialogTitle className="text-lg font-bold text-slate-800">
                 Preview Invoice

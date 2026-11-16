@@ -283,7 +283,7 @@ export default function FormPendaftaran() {
     <div className="space-y-6">
       {/* ===== Tiket Antrean ===== */}
       {result && (
-        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-600 via-blue-600 to-indigo-600 p-6 text-white shadow-xl shadow-blue-600/20 sm:p-8">
+        <div className="relative overflow-hidden rounded-3xl bg-linear-to-br from-blue-600 via-blue-600 to-indigo-600 p-6 text-white shadow-xl shadow-blue-600/20 sm:p-8">
           <div className="pointer-events-none absolute -right-10 -top-10 h-48 w-48 rounded-full bg-white/10" />
           <div className="pointer-events-none absolute -bottom-16 right-24 h-40 w-40 rounded-full bg-white/5" />
 
@@ -372,7 +372,7 @@ export default function FormPendaftaran() {
             )}
           </div>
 
-          <div className="mt-4 max-h-[340px] space-y-2 overflow-y-auto pr-1">
+          <div className="mt-4 max-h-85 space-y-2 overflow-y-auto pr-1">
             {patients.map((p) => {
               const active = selectedPatient?.id === p.id;
               return (
@@ -465,7 +465,7 @@ export default function FormPendaftaran() {
           </div>
 
           {selectedPatient ? (
-            <div className="mb-5 flex items-center gap-3 rounded-2xl bg-gradient-to-r from-blue-50 to-indigo-50 p-3 ring-1 ring-blue-100">
+            <div className="mb-5 flex items-center gap-3 rounded-2xl bg-linear-to-r from-blue-50 to-indigo-50 p-3 ring-1 ring-blue-100">
               <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-blue-600 text-sm font-bold text-white">
                 {getInitials(selectedPatient.full_name)}
               </div>
@@ -552,7 +552,7 @@ export default function FormPendaftaran() {
 
             <Button
               type="submit"
-              className="h-12 w-full gap-2 rounded-2xl bg-gradient-to-r from-blue-600 to-indigo-600 text-sm font-bold text-white shadow-lg shadow-blue-600/25 transition hover:from-blue-700 hover:to-indigo-700 disabled:opacity-50 disabled:shadow-none"
+              className="h-12 w-full gap-2 rounded-2xl bg-linear-to-r from-blue-600 to-indigo-600 text-sm font-bold text-white shadow-lg shadow-blue-600/25 transition hover:from-blue-700 hover:to-indigo-700 disabled:opacity-50 disabled:shadow-none"
               disabled={
                 loading ||
                 !selectedPatient ||
